@@ -58,3 +58,13 @@ By that, the user is able to listen to his favorite music and read the data abou
 
 ## ♢ APIs:
 - You can check the first(Gaming) API from [**HERE**](https://www.freetogame.com/api/games?platform=pc).
+- You can check the second(Music) API from [**HERE**](https://github.com/GSG-CF05/GAMSIC/blob/main/api/api.json).
+
+## ♢ Mentor:
+Our mentor is the great [Sara](https://github.com/sara219)!.
+
+## ♢ Team members:
+* [Mustafa Salem](https://github.com/moustf).
+* [Shams El-Khodary](https://github.com/shamskhodary).
+* [Basil El-Sheikh](https://github.com/Bas-Shiekh).
+* [Yasmeen Tayeh](https://github.com/yasmeentayeh99).
