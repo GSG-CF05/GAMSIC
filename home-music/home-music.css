@@ -95,19 +95,30 @@ body {
   align-self: center;
 }
 
-.container .content .rest-cont .learn-more {
+.container .content .rest-cont .music-page {
   width: 295px;
   height: 57px;
-  border-radius: 20px;
-  background-color: var(--third-color);
   align-self: center;
-  border: none;
+  text-decoration: none;
 }
 
-.container .content .rest-cont .learn-more .music-page {
+.container .content .rest-cont .music-page .learn-more {
+  width: 100%;
+  height: 100%;
   color: var(--secondary-color);
-  text-decoration: none;
+  background-color: var(--third-color);
+  border-radius: 20px;
+  border: none;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: all 0.5s linear;
+}
+.container .content .rest-cont .music-page .learn-more:hover {
+  text-decoration: underline;
+  font-size: 22px;
 }
 /* Ending the styles for the mobile screens. */
 
