@@ -1,33 +1,47 @@
-{
-  "the last of us": {
-    "name": "The last of us",
-    "Img": "https://s3.gaming-cdn.com/images/products/6215/271x377/the-last-of-us-part-ii-pc-game-cover.jpg",
+[
+  {
+    "id": 1,
+    "name": "The Last Of Us",
+    "artist": "Gustavo Santaolalla",
+    "image": "https://s3.gaming-cdn.com/images/products/6215/271x377/the-last-of-us-part-ii-pc-game-cover.jpg",
     "audio": "music/The-last-of-us.mp3"
   },
-  "a plague tale": {
-    "name": "A plague tale",
-    "Img": "https://images.gog-statics.com/3987d42ccbd6c61f8a4881f3f48e40913f75e0254ed794653f6b8972d964b6dc_product_card_v2_mobile_slider_639.jpg",
+  {
+    "id": 2,
+    "name": "A Plague Tale",
+    "artist": "Olivier Deriviere",
+    "image": "https://images.gog-statics.com/3987d42ccbd6c61f8a4881f3f48e40913f75e0254ed794653f6b8972d964b6dc_product_card_v2_mobile_slider_639.jpg",
     "audio": "music/prisoners.mp3"
   },
-  "let it die": {
-    "name": "Let it die",
-    "Img": "https://image.api.playstation.com/cdn/UP0747/CUSA03769_00/FY06FIQOS5787soccb9FRomvWDZP4Udu.png",
+  {
+    "id": 3,
+    "name": "Let It Die",
+    "artist": "Rival, Philip Strand",
+    "image": "https://image.api.playstation.com/cdn/UP0747/CUSA03769_00/FY06FIQOS5787soccb9FRomvWDZP4Udu.png",
     "audio": "music/let-it-die.mp3"
   },
-  "mirror's edge": {
-    "name": "Mirror's edge",
-    "Img": "https://cdn-cf.gamivo.com/image_original.jpg?f=17584&n=1459342452659138.jpg&h=b064774f793d5d59b88577ccd27a3d5f"
+  {
+    "id": 4,
+    "name": "Mirror's Edge",
+    "artist": "Lisa Miskovasky",
+    "image": "https://cdn-cf.gamivo.com/image_original.jpg?f=17584&n=1459342452659138.jpg&h=b064774f793d5d59b88577ccd27a3d5f"
   },
-  "assassin's creed": {
-    "name": "Assassin's creed",
-    "Img": "https://s1.gaming-cdn.com/images/products/2172/271x377/assassins-creed-ii-pc-game-ubisoft-connect-cover.jpg"
+  {
+    "id": 5,
+    "name": "Assassin's Creed",
+    "artist": "Lorne Balfe",
+    "image": "https://s1.gaming-cdn.com/images/products/2172/271x377/assassins-creed-ii-pc-game-ubisoft-connect-cover.jpg"
   },
-  "the witcher": {
+  {
+    "id": 6,
     "name": "The Witcher",
-    "Img": "https://cdn.akamai.steamstatic.com/steam/apps/303800/capsule_616x353.jpg?t=1602249714"
+    "artist": "Boisterous Pop",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/303800/capsule_616x353.jpg?t=1602249714"
   },
-  "days gone": {
-    "name": "Days gone",
-    "Img": "https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-pc-game-steam-cover.jpg"
+  {
+    "id": 7,
+    "name": "Days Gone",
+    "artist": "Nathan Whitehead",
+    "image": "https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-pc-game-steam-cover.jpg"
   }
-}
+]
