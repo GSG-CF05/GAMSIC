@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #210c39;
+  --secondary-color: #ffffff;
+  --third-color: #6644b8;
+  --theme-switcher: #f6d003;
+}
+
+body {
+  font-family: "Alef", sans-serif;
+}
+
+/* Starting the styles for the mobile screens. */
+/* All styles in the mobile sections were done by taking the screen of IPhone 12 pro as design theme. */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  overflow: hidden;
+}
+
+.container .icons {
+  width: 95%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-color);
+}
+
+.container .icons .landing-page .arrow,
+.container .icons .sun {
+  font-size: 1.2em;
+}
+
+.container .icons .landing-page {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.container .icons .sun {
+  color: var(--theme-switcher);
+  cursor: pointer;
+}
+
+.container .content {
+  position: relative;
+}
+
+.container .content #music-pic {
+  position: absolute;
+  left: 4rem;
+  top: -8rem;
+}
+
+.container .content .rest-cont {
+  width: 100%;
+  position: absolute;
+  top: 18rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .content .rest-cont .headings {
+  color: var(--secondary-color);
+}
+
+.container .content .rest-cont .headings .main-head {
+  margin-bottom: 0.3em;
+  font-weight: normal;
+  margin-left: 0.8rem;
+}
+
+.container .content .rest-cont .headings .second-head {
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  padding-left: 0.3em;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+.container .content .rest-cont .paragraph {
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  padding-right: 1.4em;
+  opacity: 0.7;
+  width: 80%;
+  align-self: center;
+}
+
+.container .content .rest-cont .learn-more {
+  width: 295px;
+  height: 57px;
+  border-radius: 20px;
+  background-color: var(--third-color);
+  align-self: center;
+  border: none;
+}
+
+.container .content .rest-cont .learn-more .music-page {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 20px;
+}
+/* Ending the styles for the mobile screens. */
+
+/* Starting the styles for the tablet screens. */
+
+@media only screen and (min-width: 768px) {
+  .container .content #music-pic {
+    left: 18rem;
+    top: -7rem;
+  }
+  .container .content .rest-cont {
+    top: 11rem;
+  }
+  .container .content .rest-cont .headings .main-head {
+    margin-left: 2.8rem;
+    font-size: xx-large;
+  }
+  .container .content .rest-cont .headings .second-head {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+  }
+}
+/* Ending the styles for the tablet screens. */
+
+/* Starting the styles for the desktop screens. */
+
+@media only screen and (min-width: 1024px) {
+  .container .content #music-pic {
+    left: 23rem;
+    top: 0rem;
+  }
+  .container .content .rest-cont {
+    top: 11rem;
+  }
+  .container .content .rest-cont .paragraph {
+    margin-bottom: 7rem;
+    width: 40%;
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .learn-more {
+    width: 400px;
+    height: 80px;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 1285px) {
+  .container .content #music-pic {
+    left: 45rem;
+    top: 0rem;
+  }
+  .container .content .rest-cont {
+    top: 11rem;
+  }
+  .container .content .rest-cont .paragraph {
+    margin-bottom: 8rem;
+    width: 50%;
+    align-self: flex-start;
+  }
+}
+/* Ending the styles for the desktop screens. */
