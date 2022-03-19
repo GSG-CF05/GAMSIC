@@ -1,33 +1,155 @@
-{
-  "the last of us": {
-    "name": "The last of us",
-    "Img": "https://s3.gaming-cdn.com/images/products/6215/271x377/the-last-of-us-part-ii-pc-game-cover.jpg",
+[
+  {
+    "id": 1,
+    "name": "The Last Of Us",
+    "artist": "Gustavo Santaolalla",
+    "image": "https://s3.gaming-cdn.com/images/products/6215/271x377/the-last-of-us-part-ii-pc-game-cover.jpg",
     "audio": "music/The-last-of-us.mp3"
   },
-  "a plague tale": {
-    "name": "A plague tale",
-    "Img": "https://images.gog-statics.com/3987d42ccbd6c61f8a4881f3f48e40913f75e0254ed794653f6b8972d964b6dc_product_card_v2_mobile_slider_639.jpg",
+  {
+    "id": 2,
+    "name": "A Plague Tale",
+    "artist": "Olivier Deriviere",
+    "image": "https://images.gog-statics.com/3987d42ccbd6c61f8a4881f3f48e40913f75e0254ed794653f6b8972d964b6dc_product_card_v2_mobile_slider_639.jpg",
     "audio": "music/prisoners.mp3"
   },
-  "let it die": {
-    "name": "Let it die",
-    "Img": "https://image.api.playstation.com/cdn/UP0747/CUSA03769_00/FY06FIQOS5787soccb9FRomvWDZP4Udu.png",
+  {
+    "id": 3,
+    "name": "Let It Die",
+    "artist": "Rival, Philip Strand",
+    "image": "https://image.api.playstation.com/cdn/UP0747/CUSA03769_00/FY06FIQOS5787soccb9FRomvWDZP4Udu.png",
     "audio": "music/let-it-die.mp3"
   },
-  "mirror's edge": {
-    "name": "Mirror's edge",
-    "Img": "https://cdn-cf.gamivo.com/image_original.jpg?f=17584&n=1459342452659138.jpg&h=b064774f793d5d59b88577ccd27a3d5f"
+  {
+    "id": 4,
+    "name": "Mirror's Edge",
+    "artist": "Lisa Miskovasky",
+    "image": "https://cdn-cf.gamivo.com/image_original.jpg?f=17584&n=1459342452659138.jpg&h=b064774f793d5d59b88577ccd27a3d5f"
   },
-  "assassin's creed": {
-    "name": "Assassin's creed",
-    "Img": "https://s1.gaming-cdn.com/images/products/2172/271x377/assassins-creed-ii-pc-game-ubisoft-connect-cover.jpg"
+  {
+    "id": 5,
+    "name": "Assassin's Creed",
+    "artist": "Lorne Balfe",
+    "image": "https://s1.gaming-cdn.com/images/products/2172/271x377/assassins-creed-ii-pc-game-ubisoft-connect-cover.jpg"
   },
-  "the witcher": {
+  {
+    "id": 6,
     "name": "The Witcher",
-    "Img": "https://cdn.akamai.steamstatic.com/steam/apps/303800/capsule_616x353.jpg?t=1602249714"
+    "artist": "Boisterous Pop",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/303800/capsule_616x353.jpg?t=1602249714"
   },
-  "days gone": {
-    "name": "Days gone",
-    "Img": "https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-pc-game-steam-cover.jpg"
+  {
+    "id": 7,
+    "name": "Days Gone",
+    "artist": "Nathan Whitehead",
+    "image": "https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-pc-game-steam-cover.jpg"
+  },
+  {
+    "id": 8,
+    "name": "God's Plan",
+    "artist": "Drake",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLMqPY8SoNt8nhiW5rzR8N2Gi57mw9Sv7aQ&usqp=CAU"
+  },
+  {
+    "id": 9,
+    "name": "Element ",
+    "artist": "Pop Smoke",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCsJd6LVlEtFWTJ2lerXcnSw6vyK4f6-hMA&usqp=CAU"
+  },
+  {
+    "id": 10,
+    "name": "Lot Of Me",
+    "artist": "Lil Tecca",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewmdB-BV8ByQ5v7SZLh14XprKL7HJ-rCBug&usqp=CAU"
+  },
+  {
+    "id": 11,
+    "name": "Nail Tech",
+    "artist": "Jack Harlow",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFAIIXOM8E8aK_u0RpVSi55AELqONDo8UBog&usqp=CAU"
+  },
+  {
+    "id": 12,
+    "name": "DNA",
+    "artist": "Kendrick Lamar",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iXMOJdhJqVLWosBL4uKRhYlDwM3CBuyGvg&usqp=CAU"
+  },
+  {
+    "id": 13,
+    "name": "16 Jib",
+    "artist": "Shabjdeed",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DjFR-gMC1Qz2_bFg8KlcqGJc48L7E9QSWw&usqp=CAU"
+  },
+  {
+    "id": 14,
+    "name": "Without Me",
+    "artist": "Eminem",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfSoiDhxe1faIhPjz3F90zqIrFqITwOC6bA&usqp=CAU"
+  },
+  {
+    "id": 15,
+    "name": "The Real Slim Shady",
+    "artist": "Eminem",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS79dGsF293VIHV-9049RixgChZ99acqFAQiw&usqp=CAU"
+  },
+  {
+    "id": 16,
+    "name": "Till I Collapse",
+    "artist": "Eminem",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-HhLgboPVuFybg2K59AKzhb85qHfS2I99w&usqp=CAU"
+  },
+  {
+    "id": 16,
+    "name": "In Da Club",
+    "artist": "50 Cent",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMtb9WOwTrQwPFx60hGttpj6l4Gnaa5xtdNQ&usqp=CAU"
+  },
+  {
+    "id": 17,
+    "name": "P.I.M.P.",
+    "artist": "50 Cent",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNueo_00dMJLVjtWdpQcivkyjlGL6JvDahw&usqp=CAU"
+  },
+  {
+    "id": 18,
+    "name": "Bones",
+    "artist": "Imagine Dragones",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yBsdmjDX5Nu4HNmpvBC6oPHc07OaMsY1jQ&usqp=CAU"
+  },
+  {
+    "id": 19,
+    "name": "Believer",
+    "artist": "Imagine Dragones",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNleOCrfgXbikBxpua9MYUFWmNX0O0cBc1g&usqp=CAU"
+  },
+  {
+    "id": 20,
+    "name": "Demones",
+    "artist": "Imagine Dragones",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSgi1I5rlpAVSlX5dDCCr2i5LoHb0QtEoBQQ&usqp=CAU"
+  },
+  {
+    "id": 21,
+    "name": "Thunder",
+    "artist": "Imagine Dragones",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT627-AkDYJl3POJkgmtkbdb9bnNwEp5AnBjQ&usqp=CAU"
+  },
+  {
+    "id": 22,
+    "name": "I'm A Mess",
+    "artist": "Babe Rexha",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SwjgvDEFPhsd-R2Kz7K5m5vq9nIw_89maw&usqp=CAU"
+  },
+  {
+    "id": 23,
+    "name": "Shape Of You",
+    "artist": "Ed Sheeran",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQycLdtbngqKqy50m0euXEdI6GXtkhTPIL1cQ&usqp=CAU"
+  },
+  {
+    "id": 24,
+    "name": "New Rules",
+    "artist": "Dua Lipa",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm2E0qMddKf8rExXmZMoZZvZIodBkBw3tLpA&usqp=CAU"
   }
-}
+]
