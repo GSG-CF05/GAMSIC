@@ -50,19 +50,20 @@ body {
 }
 
 .container .content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .content #music-pic {
-  position: absolute;
-  left: 4rem;
-  top: -8rem;
+  transform: translate(20%, -25%);
 }
 
 .container .content .rest-cont {
   width: 100%;
-  position: absolute;
-  top: 18rem;
+  flex-direction: column;
+  transform: translateY(-70%);
   display: flex;
   flex-direction: column;
 }
@@ -89,7 +90,6 @@ body {
   color: var(--secondary-color);
   margin-bottom: 3rem;
   text-align: center;
-  padding-right: 1.4em;
   opacity: 0.7;
   width: 80%;
   align-self: center;
@@ -103,8 +103,8 @@ body {
 }
 
 .container .content .rest-cont .music-page .learn-more {
-  width: 100%;
-  height: 100%;
+  width: 295px;
+  height: 57px;
   color: var(--secondary-color);
   background-color: var(--third-color);
   border-radius: 20px;
@@ -122,15 +122,14 @@ body {
 }
 /* Ending the styles for the mobile screens. */
 
-/* Starting the styles for the tablet screens. */
+/* Starting the styles for the mini tablet screens. */
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .container .content #music-pic {
-    left: 18rem;
-    top: -7rem;
+    transform: translate(30%, -20%);
   }
   .container .content .rest-cont {
-    top: 11rem;
+    transform: translateY(-125%);
   }
   .container .content .rest-cont .headings .main-head {
     margin-left: 2.8rem;
@@ -143,40 +142,52 @@ body {
 }
 /* Ending the styles for the tablet screens. */
 
-/* Starting the styles for the desktop screens. */
+/* Starting the styles for large tablets and small desktop screens. */
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .container .content #music-pic {
-    left: 23rem;
-    top: 0rem;
+    transform: translate(45%, -5%);
   }
   .container .content .rest-cont {
-    top: 11rem;
+    transform: translateY(-100%);
   }
   .container .content .rest-cont .paragraph {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     width: 40%;
     align-self: flex-start;
   }
-  .container .content .rest-cont .learn-more {
-    width: 400px;
-    height: 80px;
-    align-self: center;
-  }
-}
-
-@media only screen and (min-width: 1285px) {
-  .container .content #music-pic {
-    left: 45rem;
-    top: 0rem;
-  }
-  .container .content .rest-cont {
-    top: 11rem;
-  }
-  .container .content .rest-cont .paragraph {
-    margin-bottom: 8rem;
-    width: 50%;
+  .container .content .rest-cont .music-page {
     align-self: flex-start;
   }
+  .container .content .rest-cont .music-page .learn-more {
+    width: 400px;
+    height: 80px;
+    margin-left: 1rem;
+  }
 }
-/* Ending the styles for the desktop screens. */
+/* Ending the styles for large tablets and small desktop screens. */
+/* Starting the styles for large desktop screens. */
+@media (min-width: 1200px) {
+  .container .content #music-pic {
+    transform: translate(70%, 0%);
+  }
+  .container .content .rest-cont {
+    transform: translateY(-110%);
+  }
+  .container .content .rest-cont .paragraph {
+    padding-left: 1.5rem;
+    margin-bottom: 8rem;
+    width: 50%;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page {
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page .learn-more {
+    width: 400px;
+    height: 80px;
+    margin-left: 1rem;
+  }
+}
+/* Ending the styles for large desktop screens. */
