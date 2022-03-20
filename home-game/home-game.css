@@ -63,3 +63,29 @@ main{
     margin-top: 54px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+        flex-direction: row-reverse;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 1200px) {
+    body{
+        overflow: hidden;
+    }
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .title{
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+}
