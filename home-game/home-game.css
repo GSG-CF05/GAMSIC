@@ -6,6 +6,19 @@
 body{
     background: linear-gradient(#17082A, #301353, #17082A);
 }
+header{
+    display: flex;
+    margin: 6%  2%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.ri-sun-fill{
+    color: yellow;
+}
+.ri-arrow-right-s-line{
+    color: white;
+}
 main{
     display: flex;
     justify-content: left;
