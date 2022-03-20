@@ -78,14 +78,48 @@ main{
 }
 @media (min-width: 1200px) {
     body{
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
+    header {
+        display: flex;
+         margin: 0 0;
+        width: 100%;
+        justify-content: space-between;
+       padding: 0;
+      }
+
     main {
         flex-direction: row-reverse;
         justify-content: space-between;
+        margin-top: 7% ;
     }
     .title{
         margin-left: 5rem;
         margin-top: 5rem;
+    }
+    .descriptions{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    /*.title > h1 {*/
+    /*    font-size: 38px;*/
+    /*    font-weight: bold;*/
+    /*    color: white;*/
+    /*}*/
+    .title > h6 {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .game_description{
+        margin-left: 40px;
+        margin-top: 0;
+    }
+    .btn {
+        padding: 11px 58px;
+        margin-left: 85px;
+        margin-top: 0;
     }
 }
