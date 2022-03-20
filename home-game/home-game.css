@@ -5,13 +5,19 @@
 }
 body{
     background: linear-gradient(#17082A, #301353, #17082A);
+    padding: 2rem;
+    overflow-x: hidden;
 }
+
 header{
     display: flex;
-    margin: 6%  2%;
+    /*margin: 6%  2%;*/
     width: 100%;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 0 2rem;
+    position: fixed;
+    top: 2rem;
+    left: 0;
 }
 .ri-sun-fill{
     color: yellow;
@@ -19,32 +25,43 @@ header{
 .ri-arrow-right-s-line{
     color: white;
 }
+
 main{
     display: flex;
-    justify-content: left;
+    /*justify-content: left;*/
     flex-wrap: wrap;
     overflow-x: hidden;
 }
-.img{
+
+.game-img{
     display: flex;
     /* justify-content: flex-start; */
-    transform: translateX(-181px);
+    transform: translateX(-185px);
+    width: 100%;
+    position: relative;
+    height: 40vh;
 }
-.title{
-    margin-left: 40px;
-    margin-top: -81px;
+img{
+    position: absolute;
+    top: 5rem;
+    left: -1rem;
+
 }
-.title > h1 {
-    font-size: 38px;
-    font-weight: bold;
-    color: white;
-}
-.title > h6 {
-    color: #c1c1c1;
-    font-size: 16px;
-    margin-top: 15px;
-    margin-left: 35px;
-}
+/*.title{*/
+/*    margin-left: 40px;*/
+/*    margin-top: -81px;*/
+/*}*/
+/*.title > h1 {*/
+/*    font-size: 38px;*/
+/*    font-weight: bold;*/
+/*    color: white;*/
+/*}*/
+/*.title > h6 {*/
+/*    color: #c1c1c1;*/
+/*    font-size: 16px;*/
+/*    margin-top: 15px;*/
+/*    margin-left: 35px;*/
+/*}*/
 .game_description{
     color: #fff;
     font-size: 18px;
