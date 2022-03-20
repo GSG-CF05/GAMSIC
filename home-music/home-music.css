@@ -62,7 +62,6 @@ body {
 
 .container .content .rest-cont {
   width: 100%;
-  flex-direction: column;
   transform: translateY(-70%);
   display: flex;
   flex-direction: column;
