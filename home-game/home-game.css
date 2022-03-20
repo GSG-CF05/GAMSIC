@@ -6,8 +6,16 @@
 body{
     background: linear-gradient(#17082A, #301353, #17082A);
 }
+main{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
 .img{
-    margin-top: 73px;
+    display: flex;
+    /* justify-content: flex-start; */
+    transform: translateX(-181px);
 }
 .title{
     margin-left: 40px;
