@@ -5,7 +5,7 @@
 }
 body{
     background: linear-gradient(#17082A, #301353, #17082A);
-    padding: 2rem;
+    padding: 1rem;
     overflow-x: hidden;
 }
 
@@ -16,21 +16,22 @@ header{
     justify-content: space-between;
     padding: 0 2rem;
     position: fixed;
-    top: 2rem;
+    top: 1rem;
     left: 0;
 }
 .ri-sun-fill{
     color: yellow;
+    font-size: 1.5rem;
 }
 .ri-arrow-right-s-line{
     color: white;
+    font-size: 1.5rem;
 }
 
 main{
     display: flex;
     /*justify-content: left;*/
     flex-wrap: wrap;
-    overflow-x: hidden;
 }
 
 .game-img{
@@ -43,9 +44,8 @@ main{
 }
 img{
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     left: -1rem;
-
 }
 /*.title{*/
 /*    margin-left: 40px;*/
@@ -63,14 +63,44 @@ img{
 /*    margin-left: 35px;*/
 /*}*/
 .game_description{
+    display: flex;
     color: #fff;
     font-size: 18px;
-    margin-left: 40px;
-    margin-top: 55px;
-    width: 69%;
+    font-family: Arial;
+    /*margin-left: 40px;*/
+    /*margin-top: 55px;*/
+    width: 100%;
+    flex-wrap: wrap;
+    /*text-align: center;*/
+}
+.title{
+    width: 100%;
+    margin-top: 2rem;
+}
+.game-title{
+    width: 100% ;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.game-subtitle{
+   margin-bottom: 3rem;
+    margin-left: 1rem;
+    color: #ffffff;
+}
+.description{
+    display: flex;
+    width: 80%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.game-button {
+    width: 50%;
 }
 .btn{
+
     background: #6644B8;
     color: white;
     font-weight: bold;
@@ -78,6 +108,10 @@ img{
     border-radius: 19px;
     margin-left: 85px;
     margin-top: 54px;
+}
+a{
+    color: white;
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
