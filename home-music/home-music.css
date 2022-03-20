@@ -58,6 +58,7 @@ body {
 
 .container .content #music-pic {
   transform: translate(20%, -25%);
+  animation: picAnimationM 3s ease-in-out infinite;
 }
 
 .container .content .rest-cont {
@@ -74,13 +75,14 @@ body {
 .container .content .rest-cont .headings .main-head {
   margin-bottom: 0.3em;
   font-weight: normal;
-  margin-left: 0.8rem;
+  font-size: xx-large;
+  margin-left: 1.2rem;
   text-shadow: 0 0 7px #fff;
 }
 
 .container .content .rest-cont .headings .second-head {
   margin-bottom: 3rem;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   padding-left: 0.3em;
   font-weight: normal;
   opacity: 0.9;
@@ -90,7 +92,7 @@ body {
   color: var(--secondary-color);
   margin-bottom: 3rem;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.8;
   width: 80%;
   align-self: center;
 }
@@ -147,9 +149,11 @@ body {
 @media (min-width: 992px) and (max-width: 1199px) {
   .container .content #music-pic {
     transform: translate(45%, -5%);
+    animation: picAnimateD 3s ease-in-out infinite;
   }
   .container .content .rest-cont {
     transform: translateY(-100%);
+    margin-left: 3rem;
   }
   .container .content .rest-cont .headings .main-head {
     font-size: xxx-large;
@@ -177,6 +181,7 @@ body {
 @media (min-width: 1200px) {
   .container .content #music-pic {
     transform: translate(70%, 0%);
+    animation: picAnimateD 3s ease-in-out infinite;
   }
   .container .content .rest-cont {
     transform: translateY(-120%);
@@ -208,3 +213,29 @@ body {
   }
 }
 /* Ending the styles for large desktop screens. */
+
+/* Picture animation in the desktop. */
+@keyframes picAnimateD {
+  0% {
+    transform: translate(70%, 10%);
+  }
+  50% {
+    transform: translate(70%, -5%);
+  }
+  100% {
+    transform: translate(70%, 10%);
+  }
+}
+
+/* Picture animation in the mobile */
+@keyframes picAnimationM {
+  0% {
+    transform: translate(18%, -25%);
+  }
+  50% {
+    transform: translate(21%, -25%);
+  }
+  100% {
+    transform: translate(18%, -25%);
+  }
+}
