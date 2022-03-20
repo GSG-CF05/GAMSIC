@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --first-color: #301353;
+  --second-color: #4b397878;
+  --third-color: #ffffff;
+  --fourth-color: #d3d3d3;
+  --theme-switcher: #f6d003;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Starting the styles for the mobile screens. */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  color: var(--third-color);
+  overflow: auto;
+}
+
+.container .icons {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.container .icons .home-music {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.container .icons .home-music .arrow {
+  font-size: 1.5rem;
+}
+
+.container .icons .sun {
+  color: var(--theme-switcher);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container .bck-image {
+  z-index: 1;
+}
+
+.container .bcg-image > .bcg-img {
+  transform: translate(-80%, -41%);
+}
+
+.container .player {
+  width: 350px;
+  background-color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 2rem;
+  transform: translateY(-50%);
+}
+
+.container .player .artist {
+  width: 7rem;
+  height: 6rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .player .artist-name {
+  margin-bottom: 0.5rem;
+  text-shadow: 0px 0px 10px #000000;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--first-color);
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--third-color);
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: var(--second-color);
+  border-radius: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.container .songs-boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-5%);
+}
+
+.container .songs-boxes .song {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--first-color);
+  border-radius: 1rem;
+  padding-right: 3rem;
+  box-shadow: 0px 3px 10px 0px #4b3978a2;
+}
+
+.container .songs-boxes .song img {
+  width: 8rem;
+  height: 8rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.container .songs-boxes .song .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--fourth-color);
+  text-shadow: 0px 0px 10px #000000;
+}
+.container .songs-boxes .song .text .play {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fourth-color);
+  color: #000000;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-shadow: none;
+  cursor: pointer;
+}
+/* Ending the styles for the mobile screens. */
+
+/* Starting the styles for the mini tablet screens. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-200%, -45%);
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 2rem;
+  }
+  .container .player {
+    width: 35rem;
+  }
+  .container .player .artist-name {
+    font-size: x-large;
+  }
+  .container .songs-boxes .song img {
+    width: 12rem;
+    height: 10rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: xx-large;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: large;
+  }
+}
+
+/* Ending the styles for the mini tablet screens. */
+
+/* Starting the styles for large tablets and small desktop screens. */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-130%, -22%);
+    width: 20rem;
+    height: 20rem;
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 3rem;
+  }
+  .container .player {
+    width: 55rem;
+    padding: 2rem;
+  }
+  .container .player .artist {
+    width: 18rem;
+    height: 14rem;
+    margin-bottom: 1.5rem;
+  }
+  .container .player .artist-name {
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+  }
+  .container .songs-boxes .song img {
+    width: 15rem;
+    height: 12rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: 2.6rem;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: x-large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Starting the styles for large tablets and small desktop screens. */
+
+/* Starting the styles for large desktop screens. */
+
+@media (min-width: 1200px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-234%, -23%);
+    width: 25rem;
+    height: 25rem;
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 3rem;
+  }
+  .container .player {
+    width: 85rem;
+    padding: 2rem;
+  }
+  .container .player .artist {
+    width: 22rem;
+    height: 18rem;
+    margin-bottom: 1.5rem;
+  }
+  .container .player .artist-name {
+    font-size: xxx-large;
+    margin-bottom: 1.5rem;
+  }
+  .container .songs-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .container .songs-boxes .song {
+    width: 48%;
+  }
+  .container .songs-boxes section.song:last-child {
+    align-self: flex-start;
+  }
+  .container .songs-boxes .song img {
+    width: 15rem;
+    height: 12rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: 2.6rem;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: x-large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Starting the styles for large desktop screens. */
