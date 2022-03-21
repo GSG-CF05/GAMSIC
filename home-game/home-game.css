@@ -47,21 +47,7 @@ img{
     top: 3rem;
     left: -1rem;
 }
-/*.title{*/
-/*    margin-left: 40px;*/
-/*    margin-top: -81px;*/
-/*}*/
-/*.title > h1 {*/
-/*    font-size: 38px;*/
-/*    font-weight: bold;*/
-/*    color: white;*/
-/*}*/
-/*.title > h6 {*/
-/*    color: #c1c1c1;*/
-/*    font-size: 16px;*/
-/*    margin-top: 15px;*/
-/*    margin-left: 35px;*/
-/*}*/
+
 .game_description{
     display: flex;
     color: #fff;
@@ -115,62 +101,20 @@ a{
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    main {
-        flex-direction: row-reverse;
-    }
+
+
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    main {
-        flex-direction: row-reverse;
-        justify-content: space-around;
-    }
+   main{
+       flex-wrap: nowrap;
+       flex-direction: row-reverse;
+   }
 }
 @media (min-width: 1200px) {
-    body{
-        /*overflow: hidden;*/
-    }
-    header {
-        display: flex;
-         margin: 0 0;
-        width: 100%;
-        justify-content: space-between;
-       padding: 0;
-      }
-
-    main {
+    main{
+        flex-wrap: nowrap;
         flex-direction: row-reverse;
-        justify-content: space-between;
-        margin-top: 7% ;
-    }
-    .title{
-        margin-left: 5rem;
-        margin-top: 5rem;
-    }
-    .descriptions{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 50%;
-    }
-    /*.title > h1 {*/
-    /*    font-size: 38px;*/
-    /*    font-weight: bold;*/
-    /*    color: white;*/
-    /*}*/
-    .title > h6 {
-        margin-top: 0;
-        margin-left: 0;
-    }
-    .game_description{
-        margin-left: 40px;
-        margin-top: 0;
-    }
-    .btn {
-        padding: 11px 58px;
-        margin-left: 85px;
-        margin-top: 0;
     }
 }
