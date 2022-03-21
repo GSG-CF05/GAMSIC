@@ -116,10 +116,14 @@ a{
         flex-wrap: nowrap;
         flex-direction: row-reverse;
         margin-top: 8rem;
+        padding-left: 2rem;
     }
     .game-img{
         width: 40%;
         transform: translateX(0);
+    }
+    img {
+        left: -3rem;
     }
     .game_description{
         width: 50%;
@@ -131,6 +135,7 @@ a{
     }
     .game-title {
         width: 50%;
+        margin-bottom: 1rem;
     }
     .game-subtitle{
         font-size: 20px;
