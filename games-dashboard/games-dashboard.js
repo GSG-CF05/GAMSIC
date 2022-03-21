@@ -25,7 +25,6 @@ fetch(
         if (searchInput.value === data[i].title) {
           console.log(data[i].id);
           index = i;
-          console.log(i);
           let createImg = document.createElement("img");
           createImg.src = data[i].thumbnail;
 
