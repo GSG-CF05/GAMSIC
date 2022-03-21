@@ -11,8 +11,13 @@
   --third-color: #ffffff;
   --fourth-color: #d3d3d3;
   --theme-switcher: #f6d003;
+  --prog-cont: #74e1fa81;
+  --prog-bar: #200c38e0;
 }
 
+html {
+  font-size: 10px;
+}
 body {
   width: 100%;
   height: 100vh;
@@ -63,43 +68,92 @@ body {
   transform: translate(-80%, -41%);
 }
 
-.container .player {
-  width: 350px;
+.container .music-cont {
+  width: 70%;
+  height: 50vh;
   background-color: var(--second-color);
+  color: var(--third-color);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 3rem;
-  padding: 2rem;
-  transform: translateY(-50%);
+  gap: 1rem;
+  transform: translateY(-30%);
 }
 
-.container .player .artist {
-  width: 7rem;
-  height: 6rem;
-  margin-bottom: 0.5rem;
+.music-cont .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container .player .artist-name {
-  margin-bottom: 0.5rem;
-  text-shadow: 0px 0px 10px #000000;
+.music-cont .img .artist-image {
+  width: 70%;
+  border-radius: 1rem;
 }
 
-audio::-webkit-media-controls-panel {
-  background-color: var(--first-color);
+h2.artist-name {
+  font-size: x-large;
+  text-shadow: 0 1px 5px #fff;
+}
+.music-cont .controllers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  color: var(--third-color);
+.music-cont .controllers .progress-cont {
+  width: 100%;
+  height: 0.7rem;
+  background-color: var(--prog-cont);
+  border-radius: 0.7rem;
+  position: relative;
+  z-index: 1;
 }
 
-audio::-webkit-media-controls-timeline {
-  background-color: var(--second-color);
-  border-radius: 1.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.music-cont .controllers .progress-cont .progress-bar {
+  width: 50%;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: var(--prog-bar);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.music-cont .controllers .progress-cont .progress-bar::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--prog-bar);
+  z-index: 3;
+  left: 85%;
+  top: -7px;
+  opacity: 0;
+}
+
+.music-cont .controllers .progress-cont:hover .progress-bar::before {
+  opacity: 1;
+}
+
+.music-cont .controllers .controllers-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-cont .controllers .controllers-cont .back-arrows,
+.music-cont .controllers .controllers-cont .forward-arrows,
+.music-cont .controllers .controllers-cont .pause-play {
+  font-size: x-large;
+  cursor: pointer;
 }
 
 .container .songs-boxes {
@@ -166,11 +220,30 @@ audio::-webkit-media-controls-timeline {
   .container .icons .sun {
     font-size: 2rem;
   }
-  .container .player {
-    width: 35rem;
+
+  .music-cont .img .artist-image {
+    width: 40%;
+    border-radius: 1rem;
   }
-  .container .player .artist-name {
-    font-size: x-large;
+
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: xxx-large;
+  }
+
+  .music-cont .controllers .progress-cont {
+    height: 1.2rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1.2rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 2rem;
+    height: 2rem;
+    left: 95%;
   }
   .container .songs-boxes .song img {
     width: 12rem;
@@ -207,18 +280,37 @@ audio::-webkit-media-controls-timeline {
   .container .icons .sun {
     font-size: 3rem;
   }
-  .container .player {
-    width: 55rem;
+  .container .music-cont {
+    width: 80%;
+    height: 60vh;
     padding: 2rem;
   }
-  .container .player .artist {
-    width: 18rem;
-    height: 14rem;
-    margin-bottom: 1.5rem;
+  .music-cont .img .artist-image {
+    width: 58%;
+    border-radius: 1rem;
   }
-  .container .player .artist-name {
+  .music-cont .img .artist-image {
+    width: 33%;
+    border-radius: 1rem;
+  }
+  h2.artist-name {
     font-size: xx-large;
-    margin-bottom: 1.5rem;
+  }
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: xxx-large;
+  }
+  .music-cont .controllers .progress-cont {
+    height: 1.2rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1.2rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 2rem;
+    height: 2rem;
+    left: 92%;
   }
   .container .songs-boxes .song img {
     width: 15rem;
@@ -260,18 +352,40 @@ audio::-webkit-media-controls-timeline {
   .container .icons .sun {
     font-size: 3rem;
   }
-  .container .player {
-    width: 85rem;
-    padding: 2rem;
+  .container .music-cont {
+    width: 80%;
+    height: 60vh;
+    padding: 4rem;
   }
-  .container .player .artist {
-    width: 22rem;
-    height: 18rem;
-    margin-bottom: 1.5rem;
+  .music-cont .img .artist-image {
+    width: 24%;
+    border-radius: 1rem;
   }
-  .container .player .artist-name {
+  h2.artist-name {
     font-size: xxx-large;
-    margin-bottom: 1.5rem;
+  }
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: 4rem;
+  }
+  .music-cont .controllers .controllers-cont .current,
+  .music-cont .controllers .controllers-cont .duration {
+    font-size: x-large;
+    opacity: 0.8;
+  }
+  .music-cont .controllers .progress-cont {
+    height: 1.5rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1.5rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 3rem;
+    height: 3rem;
+    left: 97%;
+    bottom: 5%;
   }
   .container .songs-boxes {
     flex-direction: row;
