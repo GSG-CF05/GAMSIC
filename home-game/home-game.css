@@ -72,7 +72,7 @@ img{
 .game-subtitle{
    margin-bottom: 3rem;
     margin-left: 1rem;
-    color: #ffffff;
+    color: #817d7d;
 }
 .description{
     display: flex;
@@ -86,17 +86,28 @@ img{
     width: 50%;
 }
 .btn{
-
-    background: #6644B8;
+    background-color: #6644B8;
+    width: 250px;
+    height: 57px;
     color: white;
-    font-weight: bold;
-    padding: 11px 58px;
-    border-radius: 19px;
-    margin-left: 85px;
-    margin-top: 54px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: all 0.5s linear;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.btn :hover {
+    text-decoration: underline;
+    font-size: 22px;
 }
 a{
     color: white;
+    text-decoration: none;
 
 }
 
@@ -118,9 +129,19 @@ a{
     }
     .game_description{
         width: 50%;
+        margin-top: 2rem;
     }
     .title {
         width: 50%;
+    }
+    .game-title {
+        width: 50%;
+    }
+    .game-subtitle{
+        font-size: 20px;
+    }
+    .description {
+        width: 65%;
     }
 }
 @media (min-width: 1200px) {
@@ -128,15 +149,33 @@ a{
         flex-wrap: nowrap;
         flex-direction: row-reverse;
         margin-top: 5rem;
+        padding-right: 10rem;
     }
     .game-img{
         width: 40%;
         transform: translateX(0);
     }
+    img {
+        margin-left: -4rem;
+    }
     .game_description {
         width: 50%;
+        margin-top: 4rem;
+        /*width: 44%;*/
+        margin-left: 10rem;
     }
     .title {
         width: 50%;
+    }
+    .game-title {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .game-subtitle{
+        font-size: 20px;
+        color: #dad9dd;
+    }
+    .description {
+        width: 55%;
     }
 }
