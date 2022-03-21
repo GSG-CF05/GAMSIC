@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #210c39;
+  --secondary-color: #ffffff;
+  --third-color: #6644b8;
+  --theme-switcher: #f6d003;
+}
+
+body {
+  font-family: "Alef", sans-serif;
+}
+
+/* Starting the styles for the mobile screens. */
+/* All styles in the mobile sections were done by taking the screen of IPhone 12 pro as design theme. */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  overflow: hidden;
+}
+
+.container .icons {
+  width: 95%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-color);
+}
+
+.container .icons .landing-page .arrow,
+.container .icons .sun {
+  font-size: 1.5em;
+}
+
+.container .icons .landing-page {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.container .icons .sun {
+  color: var(--theme-switcher);
+  cursor: pointer;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .content #music-pic {
+  transform: translate(20%, -25%);
+  animation: picAnimationM 3s ease-in-out infinite;
+}
+
+.container .content .rest-cont {
+  width: 100%;
+  transform: translateY(-70%);
+  display: flex;
+  flex-direction: column;
+}
+
+.container .content .rest-cont .headings {
+  color: var(--secondary-color);
+}
+
+.container .content .rest-cont .headings .main-head {
+  margin-bottom: 0.3em;
+  font-weight: normal;
+  font-size: xx-large;
+  margin-left: 1.2rem;
+  text-shadow: 0 0 7px #fff;
+}
+
+.container .content .rest-cont .headings .second-head {
+  margin-bottom: 3rem;
+  margin-left: 1.5rem;
+  padding-left: 0.3em;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+.container .content .rest-cont .paragraph {
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 0.8;
+  width: 80%;
+  align-self: center;
+}
+
+.container .content .rest-cont .music-page {
+  width: 295px;
+  height: 57px;
+  align-self: center;
+  text-decoration: none;
+}
+
+.container .content .rest-cont .music-page .learn-more {
+  width: 295px;
+  height: 57px;
+  color: var(--secondary-color);
+  background-color: var(--third-color);
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: all 0.5s linear;
+}
+.container .content .rest-cont .music-page .learn-more:hover {
+  text-decoration: underline;
+  font-size: 22px;
+}
+/* Ending the styles for the mobile screens. */
+
+/* Starting the styles for the mini tablet screens. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .content #music-pic {
+    transform: translate(30%, -20%);
+  }
+  .container .content .rest-cont {
+    transform: translateY(-125%);
+  }
+  .container .content .rest-cont .headings .main-head {
+    margin-left: 2.8rem;
+    font-size: xx-large;
+  }
+  .container .content .rest-cont .headings .second-head {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+  }
+}
+/* Ending the styles for the tablet screens. */
+
+/* Starting the styles for large tablets and small desktop screens. */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container .content #music-pic {
+    transform: translate(45%, -5%);
+    animation: picAnimateD 3s ease-in-out infinite;
+  }
+  .container .content .rest-cont {
+    transform: translateY(-100%);
+    margin-left: 3rem;
+  }
+  .container .content .rest-cont .headings .main-head {
+    font-size: xxx-large;
+  }
+  .container .content .rest-cont .headings .second-head {
+    font-size: x-large;
+  }
+  .container .content .rest-cont .paragraph {
+    margin-bottom: 4rem;
+    width: 40%;
+    font-size: larger;
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page {
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page .learn-more {
+    width: 250px;
+    height: 40px;
+    margin-left: 1rem;
+  }
+}
+/* Ending the styles for large tablets and small desktop screens. */
+/* Starting the styles for large desktop screens. */
+@media (min-width: 1200px) {
+  .container .content #music-pic {
+    transform: translate(70%, 0%);
+    animation: picAnimateD 3s ease-in-out infinite;
+  }
+  .container .content .rest-cont {
+    transform: translateY(-120%);
+    margin-left: 3rem;
+  }
+  .container .content .rest-cont .headings .main-head {
+    font-size: xxx-large;
+    margin-bottom: 3rem;
+  }
+  .container .content .rest-cont .headings .second-head {
+    font-size: x-large;
+    margin-bottom: 3rem;
+  }
+  .container .content .rest-cont .paragraph {
+    padding-left: 1.5rem;
+    margin-bottom: 6rem;
+    width: 50%;
+    text-align: left;
+    font-size: larger;
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page {
+    align-self: flex-start;
+  }
+  .container .content .rest-cont .music-page .learn-more {
+    width: 300px;
+    height: 50px;
+    margin-left: 1rem;
+  }
+}
+/* Ending the styles for large desktop screens. */
+
+/* Picture animation in the desktop. */
+@keyframes picAnimateD {
+  0% {
+    transform: translate(70%, 10%);
+  }
+  50% {
+    transform: translate(70%, -5%);
+  }
+  100% {
+    transform: translate(70%, 10%);
+  }
+}
+
+/* Picture animation in the mobile */
+@keyframes picAnimationM {
+  0% {
+    transform: translate(18%, -25%);
+  }
+  50% {
+    transform: translate(21%, -25%);
+  }
+  100% {
+    transform: translate(18%, -25%);
+  }
+}
