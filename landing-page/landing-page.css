@@ -23,6 +23,7 @@ body {
   );
   --secondary-color: #ffffff;
   --third-color: #6644b8;
+  --fourth-color: black;
   --theme-switcher: #f6d003;
 }
 
@@ -65,7 +66,7 @@ header {
   color: var(--secondary-color);
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
-  text-shadow: 0 2px 5px black;
+  text-shadow: 0 2px 5px var(--fourth-color);
 }
 
 /* HEADER STYLE END */
@@ -75,7 +76,7 @@ header {
 .figure {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
   height: 40vh;
@@ -114,7 +115,7 @@ header {
   animation: animat-right 3s ease-in-out infinite;
 }
 
-.right-arrow .one{
+.right-arrow .one {
   position: absolute;
   bottom: 25%;
   left: 20px;
@@ -126,7 +127,7 @@ header {
   background: linear-gradient(160deg, rgb(88 88 88 / 36%), transparent 60%);
 }
 
-.right-arrow .two{
+.right-arrow .two {
   position: absolute;
   top: 25%;
   left: 20px;
@@ -151,7 +152,7 @@ header {
   animation: animat-left 3s ease-in-out infinite;
 }
 
-.left-arrow .one{
+.left-arrow .one {
   position: absolute;
   bottom: 25%;
   left: 20px;
@@ -163,7 +164,7 @@ header {
   background: linear-gradient(160deg, rgb(88 88 88 / 36%), transparent 60%);
 }
 
-.left-arrow .two{
+.left-arrow .two {
   position: absolute;
   top: 25%;
   left: 20px;
@@ -184,12 +185,65 @@ header {
 
 .right-arrow i,
 .left-arrow i {
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  color: rgb(255, 255, 255);
+  color: var(--secondary-color);
   font-size: 1.5rem;
   margin-left: 2rem;
 }
+
+/*BUTTON STYLE START*/
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+
+.left-arr {
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.right-arr {
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  box-shadow: inset 0px 0px 5px var(--secondary-color);
+  background: rgba(75, 12, 126, 0.336);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  height: 100%;
+}
+
+.btn a p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+.btn a i {
+  font-size: 1.5rem;
+}
+
+.btn a i:nth-child(1) {
+  margin-right: 2rem;
+}
+.btn a i:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.btn a:hover {
+  background-color: var(--third-color);
+  color: white;
+}
+
+
+/*BUTTON STYLE END*/
 
 /* ANIMATION FOR ARROW DIV START */
 
@@ -229,7 +283,7 @@ header {
     transform: translateY(-10%);
     display: none;
   }
-  
+
   .figure #music-loop {
     display: block;
     transform: translateY(10%);
@@ -244,6 +298,9 @@ header {
     display: none;
   }
 
+  .btn {
+    display: flex;
+  }
 }
 
 /* SECTION FIGURE STYLE IN large SCREEN */
@@ -256,7 +313,7 @@ header {
     transform: translateY(-10%);
     display: none;
   }
-  
+
   .figure #music-loop {
     display: block;
     transform: translateY(10%);
@@ -271,6 +328,9 @@ header {
     display: none;
   }
 
+  .btn {
+    display: flex;
+  }
 }
 
 /* SECTION FIGURE STYLE IN large SCREEN */
@@ -283,11 +343,15 @@ header {
     transform: translateY(-10%);
     display: none;
   }
-  
+
   .figure #music-loop {
     display: block;
     transform: translateY(10%);
-    margin-right: 5%;
+    margin-right: 0%;
+  }
+
+  .figure #game {
+    margin-left: 0%;
   }
 
   .left-arrow {
@@ -297,7 +361,10 @@ header {
   .right-arrow {
     display: none;
   }
-
+  
+  .btn {
+    display: flex;
+  }
 }
 /* ARROW SECTION STYLE END */
 
