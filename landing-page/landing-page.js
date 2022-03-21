@@ -8,9 +8,9 @@ rightArrow.addEventListener(`click`, goToMusicPage);
 leftArrow.addEventListener(`click`, goToGamePage);
 
 function goToMusicPage () {
-  window.open(`./home-music/home-music.html`, `_self`);
+  location.href = './home-music/home-music.html';
 }
 
 function goToGamePage () {
-  window.open(`./home-game/home-game.html`, `_self`);
+  location.href = './home-game/home-game.html';
 }
