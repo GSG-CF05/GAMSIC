@@ -110,11 +110,33 @@ a{
    main{
        flex-wrap: nowrap;
        flex-direction: row-reverse;
+       margin-top: 5rem;
    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+    }
+    .game_description{
+        width: 50%;
+    }
+    .title {
+        width: 50%;
+    }
 }
 @media (min-width: 1200px) {
     main{
         flex-wrap: nowrap;
         flex-direction: row-reverse;
+        margin-top: 5rem;
+    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+    }
+    .game_description {
+        width: 50%;
+    }
+    .title {
+        width: 50%;
     }
 }
