@@ -87,8 +87,8 @@ img{
 }
 .btn{
     background-color: #6644B8;
-    width: 250px;
-    height: 57px;
+    width: 210px;
+    height: 40px;
     color: white;
     border-radius: 20px;
     border: none;
@@ -112,7 +112,32 @@ a{
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
+    main{
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        margin-top: 8rem;
+    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+    }
+    .game_description{
+        width: 50%;
+        margin-top: 2rem;
+        margin-left: 11rem;
+    }
+    .title {
+        width: 50%;
+    }
+    .game-title {
+        width: 50%;
+    }
+    .game-subtitle{
+        font-size: 20px;
+    }
+    .description {
+        width: 65%;
+    }
 
 
 }
