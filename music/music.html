@@ -40,17 +40,37 @@
           class="bcg-img"
         />
       </figure>
-      <figure class="player">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLMqPY8SoNt8nhiW5rzR8N2Gi57mw9Sv7aQ&usqp=CAU"
-          alt="Drake."
-          class="artist"
-        />
-        <figcaption class="artist-name">Drake</figcaption>
-        <audio controls src="../api/music-api/let-it-die.mp3">
-          Your browser doesn't support the <code>audio</code> tag.
-        </audio>
-      </figure>
+      <section class="music-cont">
+        <figure class="img">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLMqPY8SoNt8nhiW5rzR8N2Gi57mw9Sv7aQ&usqp=CAU"
+            alt="Drake"
+            class="artist-image"
+          />
+        </figure>
+        <h2 class="artist-name">Drake</h2>
+        <section class="controllers">
+          <div class="progress-cont">
+            <div class="progress-bar">
+              <span class="progress"></span>
+            </div>
+          </div>
+          <div class="controllers-cont">
+            <p class="current">00:29</p>
+            <div class="back-arrows">
+              <i class="ri-arrow-left-s-fill arrow arrow-back-one"></i>
+              <i class="ri-arrow-left-s-fill arrow arrow-back-two"></i>
+            </div>
+            <i class="ri-play-circle-fill pause-play"></i>
+            <div class="forward-arrows">
+              <i class="ri-arrow-right-s-fill arrow arrow-forward-one"></i>
+              <i class="ri-arrow-right-s-fill arrow arrow-forward-two"></i>
+            </div>
+            <p class="duration">03:45</p>
+            <audio id="music" src="./music/prisoners.mp3"></audio>
+          </div>
+        </section>
+      </section>
       <main class="songs-boxes">
         <section class="song">
           <img
