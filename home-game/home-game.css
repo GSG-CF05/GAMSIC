@@ -112,11 +112,14 @@ a{
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    body{
+        overflow-y: hidden;
+    }
     main{
         flex-wrap: nowrap;
         flex-direction: row-reverse;
         margin-top: 8rem;
-        padding-left: 2rem;
+        padding-left: 3rem;
     }
     .game-img{
         width: 40%;
