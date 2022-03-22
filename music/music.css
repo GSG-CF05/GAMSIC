@@ -222,26 +222,28 @@ h2.artist-name {
   }
   .container .icons .arrow,
   .container .icons .sun {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-
+  .container .music-cont {
+    height: 35vh;
+  }
   .music-cont .img .artist-image {
-    width: 40%;
+    width: 22%;
     border-radius: 1rem;
   }
 
   .music-cont .controllers .controllers-cont .back-arrows,
   .music-cont .controllers .controllers-cont .forward-arrows,
   .music-cont .controllers .controllers-cont .pause-play {
-    font-size: xxx-large;
+    font-size: 3rem;
   }
 
   .music-cont .controllers .progress-cont {
-    height: 1.2rem;
+    height: 1rem;
   }
 
   .music-cont .controllers .progress-cont .progress-bar {
-    height: 1.2rem;
+    height: 1rem;
   }
 
   .music-cont .controllers .progress-cont .progress-bar::before {
@@ -260,10 +262,15 @@ h2.artist-name {
     justify-content: space-evenly;
   }
   .container .songs-boxes .song .text .song-name {
-    font-size: xx-large;
+    font-size: x-large;
   }
   .container .songs-boxes .song .text .artist {
     font-size: large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -273,7 +280,7 @@ h2.artist-name {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .container .bcg-image > .bcg-img {
-    transform: translate(-130%, -22%);
+    transform: translate(-195%, -27%);
     width: 20rem;
     height: 20rem;
   }
@@ -285,12 +292,12 @@ h2.artist-name {
     font-size: 3rem;
   }
   .container .music-cont {
-    width: 80%;
-    height: 60vh;
+    width: 58%;
+    height: 55vh;
     padding: 2rem;
   }
   .music-cont .img .artist-image {
-    width: 58%;
+    width: 25%;
     border-radius: 1rem;
   }
   .music-cont .img .artist-image {
@@ -303,7 +310,7 @@ h2.artist-name {
   .music-cont .controllers .controllers-cont .back-arrows,
   .music-cont .controllers .controllers-cont .forward-arrows,
   .music-cont .controllers .controllers-cont .pause-play {
-    font-size: xxx-large;
+    font-size: xx-large;
   }
   .music-cont .controllers .progress-cont {
     height: 1.2rem;
@@ -316,12 +323,16 @@ h2.artist-name {
     height: 2rem;
     left: 92%;
   }
+  .music-cont .controllers-cont .current,
+  .music-cont .controllers-cont .duration {
+    font-size: 1.5rem;
+  }
   .container .songs-boxes .song {
-    height: 17rem;
+    height: 15rem;
   }
   .container .songs-boxes .song img {
-    width: 17rem;
-    height: 17rem;
+    width: 15rem;
+    height: 15rem;
   }
   .container .songs-boxes .song .text {
     width: 60%;
@@ -348,9 +359,9 @@ h2.artist-name {
 
 @media (min-width: 1200px) {
   .container .bcg-image > .bcg-img {
-    transform: translate(-250%, -15%);
-    width: 38rem;
-    height: 38rem;
+    transform: translate(-220%, -18%);
+    width: 28rem;
+    height: 28rem;
   }
   .container .icons {
     padding: 1.2rem;
@@ -369,16 +380,16 @@ h2.artist-name {
     border-radius: 1rem;
   }
   h2.artist-name {
-    font-size: xxx-large;
+    font-size: xx-large;
   }
   .music-cont .controllers .controllers-cont .back-arrows,
   .music-cont .controllers .controllers-cont .forward-arrows,
   .music-cont .controllers .controllers-cont .pause-play {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .music-cont .controllers .controllers-cont .current,
   .music-cont .controllers .controllers-cont .duration {
-    font-size: x-large;
+    font-size: 2rem;
     opacity: 0.8;
   }
   .music-cont .controllers .progress-cont {
@@ -400,6 +411,7 @@ h2.artist-name {
     justify-content: center;
     align-items: center;
     padding: 3rem;
+    transform: translateY(-15%);
   }
   .container .songs-boxes .song {
     width: 48%;
@@ -408,8 +420,8 @@ h2.artist-name {
     align-self: flex-start;
   }
   .container .songs-boxes .song img {
-    width: 22rem;
-    height: 18rem;
+    width: 16rem;
+    height: 14rem;
   }
   .container .songs-boxes .song .text {
     width: 60%;
@@ -419,14 +431,14 @@ h2.artist-name {
     font-size: xx-large;
   }
   .container .songs-boxes .song .text .song-name {
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
   .container .songs-boxes .song .text .artist {
-    font-size: x-large;
+    font-size: large;
   }
   .container .songs-boxes .song .text .play {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     font-size: 3.5rem;
   }
 }
