@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
         songName.className = "song-name";
         songName.textContent = song.name;
         textDiv.appendChild(songName);
-        if (song.name.split(" ").length > 2) {
+        if (song.name.split("").length > 15) {
           songName.style.fontSize = "1.5rem";
         }
 
