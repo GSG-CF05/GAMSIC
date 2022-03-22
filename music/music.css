@@ -165,7 +165,7 @@ h2.artist-name {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  transform: translateY(-5%);
+  transform: translateY(-1%);
 }
 
 .container .songs-boxes .song {
@@ -194,7 +194,10 @@ h2.artist-name {
   gap: 0.7rem;
   color: var(--fourth-color);
   text-shadow: 0px 0px 10px #000000;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+.container .songs-boxes .song .text {
+  font-size: 1.3rem;
 }
 .container .songs-boxes .song .text .play {
   width: 2rem;
@@ -256,10 +259,10 @@ h2.artist-name {
     height: 10rem;
   }
   .container .songs-boxes .song .text {
-    width: 60%;
+    width: 55%;
     height: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .container .songs-boxes .song .text .song-name {
     font-size: x-large;
@@ -335,10 +338,10 @@ h2.artist-name {
     height: 15rem;
   }
   .container .songs-boxes .song .text {
-    width: 60%;
+    width: 50%;
     height: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .container .songs-boxes .song .text .song-name {
     font-size: 2.6rem;
@@ -411,7 +414,7 @@ h2.artist-name {
     justify-content: center;
     align-items: center;
     padding: 3rem;
-    transform: translateY(-15%);
+    transform: translateY(-5%);
   }
   .container .songs-boxes .song {
     width: 48%;
@@ -424,17 +427,17 @@ h2.artist-name {
     height: 14rem;
   }
   .container .songs-boxes .song .text {
-    width: 60%;
+    width: 50%;
     height: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: xx-large;
   }
   .container .songs-boxes .song .text .song-name {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .container .songs-boxes .song .text .artist {
-    font-size: large;
+    font-size: medium;
   }
   .container .songs-boxes .song .text .play {
     width: 4rem;
