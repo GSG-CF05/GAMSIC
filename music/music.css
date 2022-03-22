@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --first-color: #301353;
+  --second-color: #4b397878;
+  --third-color: #ffffff;
+  --fourth-color: #d3d3d3;
+  --theme-switcher: #f6d003;
+  --prog-cont: #74e1fa81;
+  --prog-bar: #200c38e0;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Starting the styles for the mobile screens. */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  color: var(--third-color);
+  overflow: auto;
+}
+
+.container .icons {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.container .icons .home-music {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.container .icons .home-music .arrow {
+  font-size: 2.5rem;
+}
+
+.container .icons .sun {
+  color: var(--theme-switcher);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.container .bck-image {
+  z-index: 1;
+}
+
+.container .bcg-image > .bcg-img {
+  transform: translate(-80%, -27%);
+  z-index: 0;
+}
+
+.container .music-cont {
+  width: 80%;
+  height: 25vh;
+  background-color: var(--second-color);
+  color: var(--third-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  transform: translateY(-45%);
+  border-radius: 2rem;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.246);
+}
+
+.music-cont .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-cont .img .artist-image {
+  width: 35%;
+  border-radius: 1rem;
+}
+
+h2.artist-name {
+  font-size: x-large;
+  text-shadow: 0 1px 5px #fff;
+}
+.music-cont .controllers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.music-cont .controllers .progress-cont {
+  width: 100%;
+  height: 0.7rem;
+  background-color: var(--prog-cont);
+  border-radius: 0.7rem;
+  position: relative;
+  z-index: 1;
+}
+
+.music-cont .controllers .progress-cont .progress-bar {
+  width: 50%;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: var(--prog-bar);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.music-cont .controllers .progress-cont .progress-bar::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--prog-bar);
+  z-index: 3;
+  left: 85%;
+  top: -7px;
+  opacity: 0;
+}
+
+.music-cont .controllers .progress-cont:hover .progress-bar::before {
+  opacity: 1;
+}
+
+.music-cont .controllers .controllers-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-cont .controllers .controllers-cont .back-arrows,
+.music-cont .controllers .controllers-cont .forward-arrows,
+.music-cont .controllers .controllers-cont .pause-play {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.container .songs-boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-5%);
+}
+
+.container .songs-boxes .song {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--first-color);
+  border-radius: 1rem;
+  padding-right: 7rem;
+  box-shadow: 0px 3px 10px 0px #4b3978a2;
+}
+
+.container .songs-boxes .song img {
+  width: 10rem;
+  height: 10rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.container .songs-boxes .song .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--fourth-color);
+  text-shadow: 0px 0px 10px #000000;
+  font-size: 1.5rem;
+}
+.container .songs-boxes .song .text .play {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fourth-color);
+  color: #000000;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-shadow: none;
+  cursor: pointer;
+}
+/* Ending the styles for the mobile screens. */
+
+/* Starting the styles for the mini tablet screens. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-200%, -45%);
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 2.5rem;
+  }
+  .container .music-cont {
+    height: 35vh;
+  }
+  .music-cont .img .artist-image {
+    width: 22%;
+    border-radius: 1rem;
+  }
+
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: 3rem;
+  }
+
+  .music-cont .controllers .progress-cont {
+    height: 1rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 2rem;
+    height: 2rem;
+    left: 95%;
+  }
+  .container .songs-boxes .song img {
+    width: 12rem;
+    height: 10rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: x-large;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/* Ending the styles for the mini tablet screens. */
+
+/* Starting the styles for large tablets and small desktop screens. */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-195%, -27%);
+    width: 20rem;
+    height: 20rem;
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 3rem;
+  }
+  .container .music-cont {
+    width: 58%;
+    height: 55vh;
+    padding: 2rem;
+  }
+  .music-cont .img .artist-image {
+    width: 25%;
+    border-radius: 1rem;
+  }
+  .music-cont .img .artist-image {
+    width: 33%;
+    border-radius: 1rem;
+  }
+  h2.artist-name {
+    font-size: xx-large;
+  }
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: xx-large;
+  }
+  .music-cont .controllers .progress-cont {
+    height: 1.2rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1.2rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 2rem;
+    height: 2rem;
+    left: 92%;
+  }
+  .music-cont .controllers-cont .current,
+  .music-cont .controllers-cont .duration {
+    font-size: 1.5rem;
+  }
+  .container .songs-boxes .song {
+    height: 15rem;
+  }
+  .container .songs-boxes .song img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: 2.6rem;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: x-large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Starting the styles for large tablets and small desktop screens. */
+
+/* Starting the styles for large desktop screens. */
+
+@media (min-width: 1200px) {
+  .container .bcg-image > .bcg-img {
+    transform: translate(-220%, -18%);
+    width: 28rem;
+    height: 28rem;
+  }
+  .container .icons {
+    padding: 1.2rem;
+  }
+  .container .icons .arrow,
+  .container .icons .sun {
+    font-size: 3rem;
+  }
+  .container .music-cont {
+    width: 45%;
+    height: 60vh;
+    padding: 4rem;
+  }
+  .music-cont .img .artist-image {
+    width: 24%;
+    border-radius: 1rem;
+  }
+  h2.artist-name {
+    font-size: xx-large;
+  }
+  .music-cont .controllers .controllers-cont .back-arrows,
+  .music-cont .controllers .controllers-cont .forward-arrows,
+  .music-cont .controllers .controllers-cont .pause-play {
+    font-size: 4rem;
+  }
+  .music-cont .controllers .controllers-cont .current,
+  .music-cont .controllers .controllers-cont .duration {
+    font-size: 2rem;
+    opacity: 0.8;
+  }
+  .music-cont .controllers .progress-cont {
+    height: 1.5rem;
+  }
+
+  .music-cont .controllers .progress-cont .progress-bar {
+    height: 1.5rem;
+  }
+  .music-cont .controllers .progress-cont .progress-bar::before {
+    width: 3rem;
+    height: 3rem;
+    left: 97%;
+    bottom: 5%;
+  }
+  .container .songs-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    transform: translateY(-15%);
+  }
+  .container .songs-boxes .song {
+    width: 48%;
+  }
+  .container .songs-boxes section.song:last-child {
+    align-self: flex-start;
+  }
+  .container .songs-boxes .song img {
+    width: 16rem;
+    height: 14rem;
+  }
+  .container .songs-boxes .song .text {
+    width: 60%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: xx-large;
+  }
+  .container .songs-boxes .song .text .song-name {
+    font-size: 3rem;
+  }
+  .container .songs-boxes .song .text .artist {
+    font-size: large;
+  }
+  .container .songs-boxes .song .text .play {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3.5rem;
+  }
+}
+
+/* Starting the styles for large desktop screens. */
