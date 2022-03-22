@@ -51,12 +51,12 @@ body {
 }
 
 .container .icons .home-music .arrow {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .container .icons .sun {
   color: var(--theme-switcher);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 
@@ -65,12 +65,13 @@ body {
 }
 
 .container .bcg-image > .bcg-img {
-  transform: translate(-80%, -41%);
+  transform: translate(-80%, -27%);
+  z-index: 0;
 }
 
 .container .music-cont {
   width: 80%;
-  height: 50vh;
+  height: 25vh;
   background-color: var(--second-color);
   color: var(--third-color);
   padding: 2rem;
@@ -79,8 +80,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
-  transform: translateY(-30%);
+  transform: translateY(-45%);
   border-radius: 2rem;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.246);
 }
 
 .music-cont .img {
@@ -91,7 +93,7 @@ body {
 }
 
 .music-cont .img .artist-image {
-  width: 70%;
+  width: 35%;
   border-radius: 1rem;
 }
 
@@ -314,9 +316,12 @@ h2.artist-name {
     height: 2rem;
     left: 92%;
   }
+  .container .songs-boxes .song {
+    height: 17rem;
+  }
   .container .songs-boxes .song img {
-    width: 15rem;
-    height: 12rem;
+    width: 17rem;
+    height: 17rem;
   }
   .container .songs-boxes .song .text {
     width: 60%;
@@ -343,9 +348,9 @@ h2.artist-name {
 
 @media (min-width: 1200px) {
   .container .bcg-image > .bcg-img {
-    transform: translate(-234%, -23%);
-    width: 25rem;
-    height: 25rem;
+    transform: translate(-250%, -15%);
+    width: 38rem;
+    height: 38rem;
   }
   .container .icons {
     padding: 1.2rem;
@@ -355,7 +360,7 @@ h2.artist-name {
     font-size: 3rem;
   }
   .container .music-cont {
-    width: 80%;
+    width: 45%;
     height: 60vh;
     padding: 4rem;
   }
@@ -394,7 +399,7 @@ h2.artist-name {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 3rem;
   }
   .container .songs-boxes .song {
     width: 48%;
