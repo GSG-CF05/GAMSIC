@@ -3,22 +3,22 @@
     "id": 1,
     "name": "The Last Of Us",
     "artist": "Gustavo Santaolalla",
-    "image": "https://s3.gaming-cdn.com/images/products/6215/271x377/the-last-of-us-part-ii-pc-game-cover.jpg",
-    "audio": "music/The-last-of-us.mp3"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKYlr0yvtnoJ6FKwy83FD4juvK77BnwqJKAQ&usqp=CAU",
+    "audio": "The-last-of-us"
   },
   {
     "id": 2,
     "name": "A Plague Tale",
     "artist": "Olivier Deriviere",
     "image": "https://images.gog-statics.com/3987d42ccbd6c61f8a4881f3f48e40913f75e0254ed794653f6b8972d964b6dc_product_card_v2_mobile_slider_639.jpg",
-    "audio": "music/prisoners.mp3"
+    "audio": "prisoners"
   },
   {
     "id": 3,
     "name": "Let It Die",
     "artist": "Rival, Philip Strand",
     "image": "https://image.api.playstation.com/cdn/UP0747/CUSA03769_00/FY06FIQOS5787soccb9FRomvWDZP4Udu.png",
-    "audio": "music/let-it-die.mp3"
+    "audio": "let-it-die"
   },
   {
     "id": 4,
@@ -30,7 +30,7 @@
     "id": 5,
     "name": "Assassin's Creed",
     "artist": "Lorne Balfe",
-    "image": "https://s1.gaming-cdn.com/images/products/2172/271x377/assassins-creed-ii-pc-game-ubisoft-connect-cover.jpg"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjG7bmyVhzwLonjcSvkfnPMBRNhlwxromLmQ&usqp=CAU"
   },
   {
     "id": 6,
@@ -42,7 +42,7 @@
     "id": 7,
     "name": "Days Gone",
     "artist": "Nathan Whitehead",
-    "image": "https://s3.gaming-cdn.com/images/products/6791/orig/days-gone-pc-game-steam-cover.jpg"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWzJ1C1g6y24MOjg_FPMtNu3HJl0nnM36Gg&usqp=CAU"
   },
   {
     "id": 8,

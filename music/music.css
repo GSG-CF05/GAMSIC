@@ -93,8 +93,9 @@ body {
 }
 
 .music-cont .img .artist-image {
-  width: 35%;
+  width: 18rem;
   border-radius: 1rem;
+  height: 10rem;
 }
 
 h2.artist-name {
@@ -231,7 +232,8 @@ h2.artist-name {
     height: 35vh;
   }
   .music-cont .img .artist-image {
-    width: 22%;
+    width: 22rem;
+    height: 12rem;
     border-radius: 1rem;
   }
 
@@ -300,11 +302,7 @@ h2.artist-name {
     padding: 2rem;
   }
   .music-cont .img .artist-image {
-    width: 25%;
-    border-radius: 1rem;
-  }
-  .music-cont .img .artist-image {
-    width: 33%;
+    width: 25rem;
     border-radius: 1rem;
   }
   h2.artist-name {
@@ -379,8 +377,9 @@ h2.artist-name {
     padding: 4rem;
   }
   .music-cont .img .artist-image {
-    width: 24%;
+    width: 25rem;
     border-radius: 1rem;
+    height: 15rem;
   }
   h2.artist-name {
     font-size: xx-large;
@@ -446,4 +445,4 @@ h2.artist-name {
   }
 }
 
-/* Starting the styles for large desktop screens. */
+/* Ending the styles for large desktop screens. */
