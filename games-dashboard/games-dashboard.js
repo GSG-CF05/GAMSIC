@@ -6,10 +6,11 @@ let i = 0;
 let container = document.querySelector(".container");
 let listAll = document.querySelector(".all");
 let listStrategies = document.querySelector(".strategies");
+let listShooter = document.querySelector(".shooter");
 
 /*BUILD ARRAYS FOR CATEGORIES*/
 let strategiesArray = [];
-
+let shooterArray = [];
 
 /*FETCH API LINK START*/
 fetch(
@@ -99,8 +100,6 @@ fetch(
     listStrategies.addEventListener("click", getStrategies);
 
     function getStrategies() {
-      console.log(strategiesArray);
-
       for (let i = 0; i < 10; i++) {
         let randomStrategies = Math.floor(
           Math.random() * strategiesArray.length
@@ -121,6 +120,40 @@ fetch(
       }
     }
     /*GET STRATEGIES FUNCTION END*/
+
+    /* PUSH SHOOTER FUNCTION START */
+    function pushShooter() {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].genre === "Shooter") {
+          shooterArray.push(data[i]);
+        }
+      }
+    }
+    pushShooter(); //CALLING FUNCTION
+    /* PUSH SHOOTER FUNCTION END */
+
+    /* GET SHOOTER FUNCTION START */
+    listShooter.addEventListener("click", getShooter);
+    function getShooter() {
+      for (let i = 0; i < 10; i++) {
+        let randomShooter = Math.floor(Math.random() * shooterArray.length);
+        let createCard = document.createElement("div");
+        createCard.setAttribute("class", "card");
+        let createImg = document.createElement("img");
+        createImg.src = shooterArray[randomShooter].thumbnail;
+        createImg.alt = shooterArray[randomShooter].title;
+        let createBtn = document.createElement("button");
+        createBtn.setAttribute("index", randomShooter);
+        createBtn.textContent = "More";
+        createBtn.classList = `btn`;
+        createBtn.setAttribute("data-id", randomShooter);
+        createCard.appendChild(createImg);
+        createCard.appendChild(createBtn);
+        container.replaceChild(createCard, container.childNodes[i]);
+      }
+    }
+
+    /* GET SHOOTER FUNCTION START */
   })
   .catch(Error);
 /*SEARCHTITLE FUNCTION END*/
