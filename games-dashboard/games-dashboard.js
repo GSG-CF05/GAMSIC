@@ -2,7 +2,9 @@
 let searchInput = document.querySelector(`#search`);
 let searchBtn = document.querySelector(`.ri-search-line`);
 let index = ``;
+let i = 0;
 let container = document.querySelector(".container");
+let listAll = document.querySelector(".all");
 
 /*FETCH API LINK START*/
 fetch(
@@ -51,6 +53,31 @@ fetch(
       container.appendChild(createCard);
     }
     /* GET RANDOM CARD FROM API END */
+
+    /* GET ALL RANDOM FUNCTION START */
+
+    listAll.addEventListener("click", getAllRandom);
+
+    function getAllRandom() {
+      for (let i = 0; i < 10; i++) {
+        let randomAll = Math.floor(Math.random() * data.length);
+        let createCard = document.createElement("div");
+        createCard.setAttribute("class", "card");
+        let createImg = document.createElement("img");
+        createImg.src = data[randomAll].thumbnail;
+        createImg.alt = data[randomAll].title;
+        let createBtn = document.createElement("button");
+        createBtn.setAttribute("index", randomAll);
+        createBtn.textContent = "More";
+        createBtn.classList = `btn`;
+        createBtn.setAttribute("data-id", randomAll);
+        createCard.appendChild(createImg);
+        createCard.appendChild(createBtn);
+        container.replaceChild(createCard, container.childNodes[i]);
+      }
+    }
+
+    /* GET ALLRANDOM FUNCTION END */
   })
   .catch(Error);
 /*SEARCHTITLE FUNCTION END*/
