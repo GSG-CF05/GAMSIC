@@ -1,6 +1,6 @@
 const songsBox = document.querySelector(".songs-boxes");
 const artistImage = document.getElementsByClassName("artist-image")[0];
-const artistName = document.getElementsByClassName("artist-name")[0];
+const songName = document.getElementsByClassName("song-name")[0];
 const progressCont = document.getElementsByClassName("progress-cont")[0];
 const progressBar = document.getElementsByClassName("progress-bar")[0];
 const pauseIcon = document.getElementsByClassName("pause-play")[0];
@@ -69,10 +69,11 @@ songsBox.addEventListener("click", (e) => {
             } else {
               musicAudio.src = `../api/music-api/${songs[2].audio}.mp3`;
             }
-            artistName.textContent = song.name;
+            songName.textContent = song.name;
             let section = document.querySelector("section");
             songsBox.classList.add("paused");
             musicCont.classList.add("paused");
+            musicCont.setAttribute("song-id", song.id);
             pauseIcon.className = "ri-pause-circle-line pause-play";
             musicAudio.play();
             musicAudio.addEventListener("timeupdate", (e) => {
@@ -115,7 +116,6 @@ pauseIcon.addEventListener("click", (e) => {
     musicCont.classList.remove("paused");
     musicCont.classList.add("played");
     pauseIcon.className = "ri-play-circle-line pause-play";
-    console.log(musicCont);
   }
 });
 
@@ -130,4 +130,62 @@ pauseIcon.addEventListener("dblclick", (e) => {
     musicCont.classList.add("paused");
     pauseIcon.className = "ri-pause-circle-line pause-play";
   }
+});
+
+function nextSong() {
+  let songId = musicCont.getAttribute("song-id");
+  fetch("../api/api.json")
+    .then((data) => data.json())
+    .then((songs) => {
+      songs.forEach((song) => {
+        if (song.id == +songId + 1) {
+          artistImage.src = song.image;
+          musicCont.setAttribute("song-id", song.id);
+          if (+songId + 1 < 4) {
+            musicAudio.src = `../api/music-api/${song.audio}.mp3`;
+          } else {
+            musicAudio.src = `../api/music-api/${songs[2].audio}.mp3`;
+          }
+          songName.textContent = song.name;
+          musicAudio.play();
+        }
+      });
+    });
+}
+
+arrowForwardOne.addEventListener("click", () => {
+  nextSong();
+});
+
+arrowForwardTwo.addEventListener("click", () => {
+  nextSong();
+});
+
+function previousSong() {
+  let songId = musicCont.getAttribute("song-id");
+  fetch("../api/api.json")
+    .then((data) => data.json())
+    .then((songs) => {
+      songs.forEach((song) => {
+        if (song.id == +songId - 1 && song.id > 1) {
+          artistImage.src = song.image;
+          musicCont.setAttribute("song-id", song.id);
+          if (+songId - 1 < 4) {
+            musicAudio.src = `../api/music-api/${song.audio}.mp3`;
+          } else {
+            musicAudio.src = `../api/music-api/${songs[2].audio}.mp3`;
+          }
+          songName.textContent = song.name;
+          musicAudio.play();
+        }
+      });
+    });
+}
+
+arrowBackOne.addEventListener("click", () => {
+  previousSong();
+});
+
+arrowBackTwo.addEventListener("click", () => {
+  previousSong();
 });
