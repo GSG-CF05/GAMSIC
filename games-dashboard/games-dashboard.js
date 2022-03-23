@@ -5,6 +5,11 @@ let index = ``;
 let i = 0;
 let container = document.querySelector(".container");
 let listAll = document.querySelector(".all");
+let listStrategies = document.querySelector(".strategies");
+
+/*BUILD ARRAYS FOR CATEGORIES*/
+let strategiesArray = [];
+
 
 /*FETCH API LINK START*/
 fetch(
@@ -78,6 +83,44 @@ fetch(
     }
 
     /* GET ALLRANDOM FUNCTION END */
+
+    /*PUSH STRATEGIES FUNCTION START*/
+    function pushStrategies() {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].genre === "Strategy") {
+          strategiesArray.push(data[i]);
+        }
+      }
+    }
+    pushStrategies(); //CALLING FUNCTION
+    /*PUSH STRATEGIES FUNCTION END*/
+
+    /* GET STRATEGIES FUNCTION START */
+    listStrategies.addEventListener("click", getStrategies);
+
+    function getStrategies() {
+      console.log(strategiesArray);
+
+      for (let i = 0; i < 10; i++) {
+        let randomStrategies = Math.floor(
+          Math.random() * strategiesArray.length
+        );
+        let createCard = document.createElement("div");
+        createCard.setAttribute("class", "card");
+        let createImg = document.createElement("img");
+        createImg.src = strategiesArray[randomStrategies].thumbnail;
+        createImg.alt = strategiesArray[randomStrategies].title;
+        let createBtn = document.createElement("button");
+        createBtn.setAttribute("index", randomStrategies);
+        createBtn.textContent = "More";
+        createBtn.classList = `btn`;
+        createBtn.setAttribute("data-id", randomStrategies);
+        createCard.appendChild(createImg);
+        createCard.appendChild(createBtn);
+        container.replaceChild(createCard, container.childNodes[i]);
+      }
+    }
+    /*GET STRATEGIES FUNCTION END*/
   })
   .catch(Error);
 /*SEARCHTITLE FUNCTION END*/
