@@ -2,8 +2,7 @@
 let searchInput = document.querySelector(`#search`);
 let searchBtn = document.querySelector(`.ri-search-line`);
 let index = ``;
-let i = 0;
-let getBackground = document.querySelector(".container");
+let container = document.querySelector(".container");
 
 /*FETCH API LINK START*/
 fetch(
@@ -31,10 +30,27 @@ fetch(
           let addCard = document.createElement("div");
           addCard.setAttribute("class", "card");
           addCard.appendChild(createImg);
-          getBackground.appendChild(addCard);
+          container.appendChild(addCard);
         }
       }
     }
+    /* GET RANDOM CARD FROM API START */
+    for (let i = 0; i < 10; i++) {
+      let randomAll = Math.floor(Math.random() * data.length);
+      let createCard = document.createElement("div");
+      createCard.setAttribute("class", "card");
+      let createImg = document.createElement("img");
+      createImg.src = data[randomAll].thumbnail;
+      createImg.alt = data[randomAll].title;
+      let createBtn = document.createElement("button");
+      createBtn.setAttribute("data-id", randomAll);
+      createBtn.classList = `btn`;
+      createBtn.textContent = "More";
+      createCard.appendChild(createImg);
+      createCard.appendChild(createBtn);
+      container.appendChild(createCard);
+    }
+    /* GET RANDOM CARD FROM API END */
   })
   .catch(Error);
-/*SEARCHTITLE FUNCTION START*/
+/*SEARCHTITLE FUNCTION END*/
