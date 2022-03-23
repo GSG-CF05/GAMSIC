@@ -2,17 +2,20 @@
 let searchInput = document.querySelector(`#search`);
 let searchBtn = document.querySelector(`.ri-search-line`);
 let index = ``;
-let i = 0;
 let container = document.querySelector(".container");
 let listAll = document.querySelector(".all");
 let listStrategies = document.querySelector(".strategies");
 let listShooter = document.querySelector(".shooter");
 let listMM = document.querySelector(".mmorpg");
+let button = document.querySelector(".more-btn");
+let btn;
 
 /*BUILD ARRAYS FOR CATEGORIES*/
 let strategiesArray = [];
 let shooterArray = [];
 let mmArray = [];
+let i = 0;
+
 
 /*FETCH API LINK START*/
 fetch(
@@ -192,6 +195,18 @@ fetch(
     }
 
     /* GET MMORPG FUNCTION END */
+
+    /* SAVE INDEX OF OBJECT BY BUTTON FUNCTION START */
+    container.addEventListener(`click`, btnClicked);
+
+    function btnClicked(e) {
+      if (e.target.classList.contains(`btn`)) {
+        let itemText = e.target.getAttribute("data-id");
+        localStorage.setItem(`index`, itemText);
+      }
+    }
+
+    /* SAVE INDEX OF OBJECT BY BUTTON FUNCTION END */
   })
   .catch(Error);
 /*FETCH API LINK END*/
