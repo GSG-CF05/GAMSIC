@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#17082A, #301353, #17082A);
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    /*margin: 6%  2%;*/
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+}
+.ri-sun-fill{
+    color: yellow;
+    font-size: 1.5rem;
+}
+.ri-arrow-right-s-line{
+    color: white;
+    font-size: 1.5rem;
+}
+
+main{
+    display: flex;
+    /*justify-content: left;*/
+    flex-wrap: wrap;
+}
+
+.game-img{
+    display: flex;
+    /* justify-content: flex-start; */
+    transform: translateX(-185px);
+    width: 100%;
+    position: relative;
+    height: 40vh;
+}
+img{
+    position: absolute;
+    top: 3rem;
+    left: -1rem;
+}
+
+.game_description{
+    display: flex;
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial;
+    /*margin-left: 40px;*/
+    /*margin-top: 55px;*/
+    width: 100%;
+    flex-wrap: wrap;
+    /*text-align: center;*/
+}
+.title{
+    width: 100%;
+    margin-top: 2rem;
+    font-family: Roboto;
+}
+.game-title{
+    width: 100% ;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.game-subtitle{
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    color: #817d7d;
+}
+.description{
+    display: flex;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.game-button {
+    width: 50%;
+}
+.btn{
+    background-color: #6644B8;
+    width: 210px;
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: all 0.5s linear;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.btn :hover {
+    text-decoration: underline;
+    font-size: 22px;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body{
+        overflow-y: hidden;
+    }
+    main{
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        margin-top: 8rem;
+        padding-left: 3rem;
+    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+    }
+    img {
+        left: -3rem;
+    }
+    .game_description{
+        width: 50%;
+        margin-top: 2rem;
+        margin-left: 11rem;
+    }
+    .title {
+        width: 50%;
+    }
+    .game-title {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .game-subtitle{
+        font-size: 20px;
+    }
+    .description {
+        width: 65%;
+    }
+
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    main{
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        margin-top: 5rem;
+    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+    }
+    .game_description{
+        width: 50%;
+        margin-top: 2rem;
+    }
+    .title {
+        width: 50%;
+    }
+    .game-title {
+        width: 50%;
+    }
+    .game-subtitle{
+        font-size: 20px;
+    }
+    .description {
+        width: 65%;
+    }
+}
+@media (min-width: 1200px) {
+    main{
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        margin-top: 5rem;
+        padding-right: 10rem;
+    }
+    .game-img{
+        width: 40%;
+        transform: translateX(0);
+
+    }
+
+    img {
+        margin-left: -4rem;
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+    .game_description {
+        width: 50%;
+        margin-top: 4rem;
+        /*width: 44%;*/
+        margin-left: 10rem;
+    }
+    .title {
+        width: 50%;
+    }
+    .game-title {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .game-subtitle{
+        font-size: 20px;
+        color: #dad9dd;
+    }
+    .description {
+        width: 55%;
+    }
+}
