@@ -13,6 +13,7 @@ const arrowForwardTwo = document.getElementsByClassName("arrow-forward-two")[0];
 const musicAudio = document.getElementById("music");
 const musicCont = document.querySelector(".music-cont");
 
+// * Adding event listener to fetch the data when the page is loaded and put the data inside the page through dom manipulation.
 window.addEventListener("load", () => {
   fetch("../api/api.json")
     .then((data) => data.json())
@@ -37,6 +38,8 @@ window.addEventListener("load", () => {
         songName.className = "song-name";
         songName.textContent = song.name;
         textDiv.appendChild(songName);
+        // ! At the page there was some songs' titles that large for the styles,
+        // ! so I filtered the titles depending on the number of letters and edited the font-size property.
         if (song.name.split("").length > 12) {
           songName.style.fontSize = "1.5rem";
         }
@@ -54,8 +57,11 @@ window.addEventListener("load", () => {
     });
 });
 
+// * Adding the click event listener to the song box to target the play icon to play the selected song in the player box
+
 songsBox.addEventListener("click", (e) => {
   if (e.target.classList.contains("play")) {
+    // ! Getting the selected song id to compare it to the data api to fetch the right object.
     let selectedId =
       e.target.parentElement.parentElement.getAttribute("data-id");
     fetch("../api/api.json")
@@ -76,6 +82,7 @@ songsBox.addEventListener("click", (e) => {
             musicCont.setAttribute("song-id", song.id);
             pauseIcon.className = "ri-pause-circle-line pause-play";
             musicAudio.play();
+            // ! Add event listener to the music audio element to get the data of the selected song in the src attr.
             musicAudio.addEventListener("timeupdate", (e) => {
               let duration = document.querySelector(".duration");
               let currentTime = document.querySelector(".current");
@@ -83,15 +90,15 @@ songsBox.addEventListener("click", (e) => {
               let audioDuration = e.target.duration;
               let progressWidth = (audioCurrentTime / audioDuration) * 100;
               progressBar.style.width = `${progressWidth}%`;
-              let minutes = Math.floor(audioDuration / 60);
-              let seconds = Math.floor(audioDuration % 60);
+              let minutes = Math.floor(audioDuration / 60); // ! Minutes duration.
+              let seconds = Math.floor(audioDuration % 60); // ! Seconds duration.
               if (seconds < 10) {
                 seconds = `0${seconds}`;
               }
               duration.textContent = `${minutes}:${seconds}`;
 
-              let currMinutes = Math.floor(audioCurrentTime / 60);
-              let currSeconds = Math.floor(audioCurrentTime % 60);
+              let currMinutes = Math.floor(audioCurrentTime / 60); // ! Minutes current counter.
+              let currSeconds = Math.floor(audioCurrentTime % 60); // ! Seconds current counter.
               if (currMinutes < 10) {
                 currMinutes = `0${currMinutes}`;
               }
@@ -106,6 +113,8 @@ songsBox.addEventListener("click", (e) => {
   }
 });
 
+// * Adding the event listener to the pause icon to pause the music currently played.
+
 pauseIcon.addEventListener("click", (e) => {
   if (
     e.target.parentElement.parentElement.parentElement.classList.contains(
@@ -119,6 +128,8 @@ pauseIcon.addEventListener("click", (e) => {
   }
 });
 
+// * Adding the event listener to the play icon to play the music currently paused.
+
 pauseIcon.addEventListener("dblclick", (e) => {
   if (
     e.target.parentElement.parentElement.parentElement.classList.contains(
@@ -131,6 +142,8 @@ pauseIcon.addEventListener("dblclick", (e) => {
     pauseIcon.className = "ri-pause-circle-line pause-play";
   }
 });
+
+// * Creating the function that responsible for moving to the next song in the box player.
 
 function nextSong() {
   let songId = musicCont.getAttribute("song-id");
@@ -153,6 +166,8 @@ function nextSong() {
     });
 }
 
+// * Adding the event listener to the first and second forward arrows.
+
 arrowForwardOne.addEventListener("click", () => {
   nextSong();
 });
@@ -161,13 +176,15 @@ arrowForwardTwo.addEventListener("click", () => {
   nextSong();
 });
 
+// * Creating the function that responsible for moving to the previous song if the id wasn't 1 or less.
+
 function previousSong() {
   let songId = musicCont.getAttribute("song-id");
   fetch("../api/api.json")
     .then((data) => data.json())
     .then((songs) => {
       songs.forEach((song) => {
-        if (song.id == +songId - 1 && song.id > 1) {
+        if (song.id == +songId - 1) {
           artistImage.src = song.image;
           musicCont.setAttribute("song-id", song.id);
           if (+songId - 1 < 4) {
@@ -181,6 +198,8 @@ function previousSong() {
       });
     });
 }
+
+// * Adding the event listener to the first and second backward arrows.
 
 arrowBackOne.addEventListener("click", () => {
   previousSong();

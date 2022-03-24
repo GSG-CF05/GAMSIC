@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
 }
 
+/* The dark theme colors */
 :root {
   --first-color: #301353;
   --second-color: #4b397878;
@@ -12,7 +13,7 @@
   --fourth-color: #d3d3d3;
   --theme-switcher: #f6d003;
   --prog-cont: #74e1fa81;
-  --prog-bar: #200c38e0;
+  --prog-bar: #200c38;
 }
 
 html {
@@ -52,12 +53,26 @@ body {
 
 .container .icons .home-music .arrow {
   font-size: 2.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.container .icons .home-music .arrow:hover {
+  display: inline-block;
+  box-shadow: 0px 0px 4px 1px var(--third-color);
+  border-radius: 20%;
 }
 
 .container .icons .sun {
   color: var(--theme-switcher);
   font-size: 2.5rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.container .icons .sun:hover {
+  display: inline-block;
+  box-shadow: 0px 0px 4px 1px var(--theme-switcher);
+  border-radius: 20%;
 }
 
 .container .bck-image {
@@ -83,6 +98,7 @@ body {
   transform: translateY(-45%);
   border-radius: 2rem;
   box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.246);
+  transition: 0.3s ease-in-out;
 }
 
 .music-cont .img {
@@ -119,11 +135,11 @@ h2.artist-name {
 }
 
 .music-cont .controllers .progress-cont .progress-bar {
-  width: 50%;
+  width: 2%;
   height: 0.7rem;
   border-radius: 0.7rem;
   background-color: var(--prog-bar);
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 2;
@@ -136,9 +152,9 @@ h2.artist-name {
   height: 1.5rem;
   border-radius: 50%;
   background-color: var(--prog-bar);
-  z-index: 3;
-  left: 85%;
-  top: -7px;
+  /* z-index: 3; */
+  left: 70%;
+  top: -5px;
   opacity: 0;
 }
 
@@ -158,6 +174,24 @@ h2.artist-name {
 .music-cont .controllers .controllers-cont .pause-play {
   font-size: x-large;
   cursor: pointer;
+}
+
+.music-cont .controllers .controllers-cont .back-arrows .arrow-back-one:hover,
+.music-cont .controllers .controllers-cont .back-arrows .arrow-back-two:hover,
+.music-cont
+  .controllers
+  .controllers-cont
+  .forward-arrows
+  .arrow-forward-one:hover,
+.music-cont
+  .controllers
+  .controllers-cont
+  .forward-arrows
+  .arrow-forward-two:hover,
+.music-cont .controllers .controllers-cont .pause-play:hover {
+  display: inline-block;
+  box-shadow: 0px 0px 4px 1px var(--third-color);
+  border-radius: 20%;
 }
 
 .container .songs-boxes {
@@ -213,6 +247,15 @@ h2.artist-name {
   text-shadow: none;
   cursor: pointer;
 }
+
+.container .songs-boxes .song .text .play:hover {
+  display: inline-block;
+  box-shadow: 0px 0px 4px 1px var(--third-color);
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Ending the styles for the mobile screens. */
 
 /* Starting the styles for the mini tablet screens. */
@@ -254,7 +297,7 @@ h2.artist-name {
   .music-cont .controllers .progress-cont .progress-bar::before {
     width: 2rem;
     height: 2rem;
-    left: 95%;
+    left: 70%;
   }
   .container .songs-boxes .song img {
     width: 12rem;
@@ -354,7 +397,7 @@ h2.artist-name {
   }
 }
 
-/* Starting the styles for large tablets and small desktop screens. */
+/* Ending the styles for large tablets and small desktop screens. */
 
 /* Starting the styles for large desktop screens. */
 
@@ -402,9 +445,9 @@ h2.artist-name {
     height: 1.5rem;
   }
   .music-cont .controllers .progress-cont .progress-bar::before {
-    width: 3rem;
-    height: 3rem;
-    left: 97%;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 80%;
     bottom: 5%;
   }
   .container .songs-boxes {
