@@ -208,3 +208,35 @@ arrowBackOne.addEventListener("click", () => {
 arrowBackTwo.addEventListener("click", () => {
   previousSong();
 });
+
+// * The theme switcher function.
+
+const bodyElement = document.querySelector("body");
+const themeSwitcher = document.querySelector(".sun");
+
+// * Adding the event listener to the theme switcher icon.
+themeSwitcher.addEventListener("click", themeSwitch);
+
+// * The function responsible for toggling the light class in and from the body element.
+function setDarkTheme() {
+  bodyElement.classList.toggle("light");
+}
+
+let isThemeDark = localStorage.getItem("isThemeDark");
+
+if (isThemeDark == "true") setDarkTheme();
+
+// * The function that responsible for switching the theme and adding it to local storage.
+let backArrow = document.querySelector(".arrow");
+function themeSwitch() {
+  let isDarkTheme = window.localStorage.getItem("isThemeDark");
+  if (isDarkTheme == "true") {
+    backArrow.style.color = "#ffffff";
+    setDarkTheme();
+    localStorage.setItem("isThemeDark", "false");
+  } else {
+    backArrow.style.color = "#000000";
+    setDarkTheme();
+    localStorage.setItem("isThemeDark", "true");
+  }
+}

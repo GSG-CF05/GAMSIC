@@ -7,6 +7,7 @@
 
 /* The dark theme colors */
 :root {
+  --background-color: linear-gradient(to bottom, #17082a, #301353, #17082a);
   --first-color: #301353;
   --second-color: #4b397878;
   --third-color: #ffffff;
@@ -14,6 +15,17 @@
   --theme-switcher: #f6d003;
   --prog-cont: #74e1fa81;
   --prog-bar: #200c38;
+}
+
+.light {
+    --background-color: #ffffff;
+    --first-color: #0c5cd4ce;
+    --second-color: #0658d3b4;
+    --third-color: #ffffff;
+    --fourth-color: #d3d3d3;
+    --theme-switcher: #000000;
+    --prog-cont: #0C5CD4;
+    --prog-bar: #C3D8FC;
 }
 
 html {
@@ -32,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  background-image: var(--background-color);
   color: var(--third-color);
   overflow: auto;
 }
