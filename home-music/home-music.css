@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
 }
 
+/* The dark theme colors. */
 :root {
   --background-color: linear-gradient(to bottom, #17082a, #301353, #17082a);
   --main-color: #210c39;
@@ -13,6 +14,7 @@
   --theme-switcher: #f6d003;
 }
 
+/* The dark theme colors. */
 .light {
   --background-color: #ffffff;
   --main-color: #0658d39d;
@@ -26,7 +28,7 @@ body {
 }
 
 /* Starting the styles for the mobile screens. */
-/* All styles in the mobile sections were done by taking the screen of IPhone 12 pro as design theme. */
+/* All styles in the mobile sections were done by taking the screen of IPhone 12 pro as design frame. */
 .container {
   width: 100%;
   height: 100vh;
@@ -53,9 +55,27 @@ body {
   text-decoration: none;
 }
 
+.container .icons .landing-page .arrow {
+  transition: 0.3s ease-in-out;
+}
+
+.container .icons .landing-page .arrow:hover {
+  display: inline-block;
+  box-shadow: 0px 0px 4px 1px var(--secondary-color);
+  border-radius: 20%;
+}
+
 .container .icons .sun-moon {
   color: var(--theme-switcher);
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.container .icons .sun-moon:hover {
+  box-shadow: 0px 0px 4px 1px var(--theme-switcher);
+  border-radius: 20%;
 }
 
 .container .content {
@@ -68,6 +88,8 @@ body {
 .container .content #music-pic {
   transform: translate(20%, -25%);
   animation: picAnimationM 3s ease-in-out infinite;
+  position: relative;
+  z-index: 0;
 }
 
 .container .content .rest-cont {
@@ -126,10 +148,12 @@ body {
   align-items: center;
   outline: none;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 .container .content .rest-cont .music-page .learn-more:hover {
   text-decoration: underline;
-  font-size: 22px;
+  font-size: 21px;
+  box-shadow: 0px 0px 4px 1px var(--third-color);
 }
 /* Ending the styles for the mobile screens. */
 
@@ -151,7 +175,7 @@ body {
     margin-left: 3rem;
   }
 }
-/* Ending the styles for the tablet screens. */
+/* Ending the styles for the mini tablet screens. */
 
 /* Starting the styles for large tablets and small desktop screens. */
 
@@ -186,6 +210,7 @@ body {
   }
 }
 /* Ending the styles for large tablets and small desktop screens. */
+
 /* Starting the styles for large desktop screens. */
 @media (min-width: 1200px) {
   .container .content #music-pic {
