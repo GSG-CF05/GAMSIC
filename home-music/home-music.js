@@ -11,7 +11,7 @@ function setDarkTheme() {
 
 let isThemeDark = localStorage.getItem("isThemeDark");
 
-if (localStorage.getItem("isThemeDark") == "true") setDarkTheme();
+if (isThemeDark == "true") setDarkTheme();
 
 // * The function that responsible for switching the theme and adding it to local storage.
 function themeSwitch() {
