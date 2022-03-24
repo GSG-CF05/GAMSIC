@@ -10,7 +10,7 @@ app.appendChild(container)
 
 let pargraph = document.createElement('p')
 pargraph.setAttribute('class' , 'pargraph')
-title.appendChild(pargraph)
+title.appendChild(pargra)
 
 let indexStorage = [];
 indexStorage = JSON.parse(localStorage.getItem('index'));
@@ -35,9 +35,9 @@ fetch(
 
         // console.log(data)
         data.forEach(games => {
-            console.log(games)
-
-
+            // let card = document.createElement('div')
+            card.setAttribute('class', 'card')
+            container.appendChild(card)
 
             let description = document.createElement('h6')
             description.textContent = games.short_description
