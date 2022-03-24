@@ -62,18 +62,24 @@ img{
 .title{
     width: 100%;
     margin-top: 2rem;
-    font-family: Roboto;
+
 }
 .game-title{
     width: 100% ;
     font-size: 38px;
+    font-family: "Alef", sans-serif;
     font-weight: bold;
     margin-bottom: 2rem;
 }
 .game-subtitle{
     margin-bottom: 3rem;
     margin-left: 1rem;
-    color: #817d7d;
+    color: white;
+    opacity: 0.8;
+    font-family:"Alef", sans-serif;
+    font-size: 20px;
+    font-weight:400 ;
+
 }
 .description{
     display: flex;
@@ -81,6 +87,8 @@ img{
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: 1rem;
+    font-family: "Alef", sans-serif;
 
 }
 .game-button {
@@ -88,8 +96,8 @@ img{
 }
 .btn{
     background-color: #6644B8;
-    width: 210px;
-    height: 40px;
+    width: 295px;
+    height: 56px;
     color: white;
     border-radius: 20px;
     border: none;
@@ -99,8 +107,9 @@ img{
     align-items: center;
     outline: none;
     transition: all 0.5s linear;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    font-family: Alef , sans-serif;
 }
 .btn :hover {
     text-decoration: underline;
@@ -146,6 +155,10 @@ a{
     }
     .description {
         width: 65%;
+        margin-left: 0rem;
+    }
+    .btn {
+        margin-top: 3rem;
     }
 
 
@@ -175,7 +188,11 @@ a{
         font-size: 20px;
     }
     .description {
-        width: 65%;
+        width: 55%;
+        margin-left: 0rem;
+    }
+    .btn {
+        margin-top: 3rem;
     }
 }
 @media (min-width: 1200px) {
@@ -200,12 +217,12 @@ a{
     @keyframes slidein {
         from {
             margin-left: 100%;
-            width: 300%;
+            width: 100%;
         }
 
         to {
             margin-left: 0%;
-            width: 100%;
+            width: 70%;
         }
     }
     .game_description {
@@ -227,5 +244,9 @@ a{
     }
     .description {
         width: 55%;
+        margin-left: 0rem;
+    }
+    .btn {
+        margin-top: 3rem;
     }
 }
