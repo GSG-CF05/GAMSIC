@@ -12,28 +12,27 @@ body {
 }
 
 :root {
-  --main-color: linear-gradient(
-    180deg,
-    #17082a 0%,
-    #17082a 0%,
-    #301353 40.1%,
-    #17082a 100%
-  );
+  --background-color: linear-gradient(to bottom, #17082a, #301353, #17082a);
+  --main-color: #210c39;
   --secondary-color: #ffffff;
   --third-color: #6644b8;
   --theme-switcher: #f6d003;
+  --box-shadow: #4b397899;
+}
+
+.light {
+  --background-color: #ffffff;
+  --main-color: #0658d39d;
+  --secondary-color: #333333;
+  --third-color: #548ce0;
+  --theme-switcher: #000000;
+  --box-shadow: #2c71db;
 }
 
 main {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    180deg,
-    #17082a 0%,
-    #17082a 0%,
-    #301353 40.1%,
-    #17082a 100%
-  );
+  background: var(--background-color);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -94,13 +93,13 @@ form input {
   background: rgba(255, 255, 255, 0);
   border: 0;
   border: 1px solid black;
-  box-shadow: 0 0 10px 4px rgba(75, 57, 120, 0.6);
+  box-shadow: 0 0 10px 4px var(--box-shadow);
   padding-left: 4rem;
   color: var(--secondary-color);
 }
 
 form input::-webkit-input-placeholder {
-  color: hsl(0, 0%, 85%);
+  color: var(--secondary-color);
   text-shadow: 0 0 5px black;
   font-family: "Alef", sans-serif;
 }
