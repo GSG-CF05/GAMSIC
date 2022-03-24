@@ -1,4 +1,4 @@
-# Gamsick website.
+# Gamsick website
 
 ## ♢ The problem that we solved:
 
