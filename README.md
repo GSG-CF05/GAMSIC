@@ -5,6 +5,8 @@
 When we need to search about gaming news or details, we would want to hear music of some kinds, so we would use another app to listen to them.
 But in this web app, we solved this problem and joined the gaming news with music section to hear them.
 
+## ♢ You can check the live link form [HERE](https://gsg-cf05.github.io/GAMSIC/).
+
 ## ♢ Figma Design
 Check out the figma design from [**HERE**](https://www.figma.com/file/bJPqD74cqoKSb64Yzre5T5/team7?node-id=0%3A1).
 
