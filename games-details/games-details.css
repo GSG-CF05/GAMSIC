@@ -1,0 +1,209 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(180deg, #1C0A32 0%, #2E124F 38.02%, #1A0A2F 100%);
+
+}
+header{
+    display: flex;
+    /*margin: 6%  2%;*/
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+}
+.ri-sun-fill{
+    color: yellow;
+    font-size: 1.5rem;
+}
+.ri-arrow-right-s-line{
+    color: white;
+    font-size: 1.5rem;
+}
+main {
+    overflow : hidden ;
+    height: 100vh;
+    /*position: absolute;*/
+    /*background-image: url("../assets/images/Xbox-wireless-controller-carbon-black 2.png");*/
+    /*background-repeat: no-repeat;*/
+    /*z-index:1 ;*/
+    /*box-shadow: 0px 0px 4px rgba(75, 57, 120, 0.6);*/
+    /*border-radius: 50px 50px 0px 0px;*/
+
+}
+.cover{
+    visibility: hidden;
+}
+.main-background {
+    position: relative;
+    z-index: -1;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -13rem;
+    transform: rotateZ(-30deg);
+
+}
+.game-details-description {
+    color: white;
+    /*z-index: 9999;*/
+    /*border: 1px solid #6644B8;*/
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+.game-title {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.game-title > h1 {
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #CC6DCE;
+}
+.game-details  > h6 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Roboto;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.game-details > p {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-family:Roboto ;
+    font-size: 18px;
+    color: #817d7d;
+}
+.btn{
+    background-color: #6644B8;
+    width: 210px;
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: all 0.5s linear;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.btn :hover {
+    text-decoration: underline;
+    font-size: 22px;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cover{
+        background-image: url("../assets/images/pexels-photo-3165335.jpeg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        visibility: visible;
+        filter: blur(5px);
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .game-img {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    img {
+        /*border: 2px solid #3a97d5;*/
+        /*border-radius: 50%;*/
+    }
+    .cover{
+        background-image: url("../assets/images/pexels-photo-3165335.jpeg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        visibility: visible;
+        filter: blur(5px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .cover{
+        position: relative;
+        background-image: url("../assets/images/pexels-photo-3165335.jpeg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        visibility: visible;
+        filter: blur(5px);
+    }
+    .game-img {
+        position: relative;
+        width: -21%;
+        margin-top: -6rem;
+        margin-left: 3rem;
+        /*border: 2px solid;*/
+    }
+
+    .game-img1{
+        width: 200px;
+        /* height: 20%; */
+        height: 200px;
+        border: 2px solid #cc6dce;
+        box-shadow: 2px 2px 7px #b8b6b9;
+    }
+    .game-title {
+        display: flex;
+        justify-content: center;
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+    }
+    .game-title > h1 {
+        font-size: 40px;
+    }
+    .game_descripe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin-top: -2rem;
+        margin-left: 19rem;
+    }
+    .game-btn {
+        margin-top: -16rem;
+        margin-left: 1rem;
+    }
+
+    .main-background {
+        position: relative;
+        z-index: -1;
+        opacity: 0.5;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -6rem;
+        transform: rotateZ(-38deg);
+        margin-left: 56rem;
+        width: 34%;
+    }
+
+
+}
