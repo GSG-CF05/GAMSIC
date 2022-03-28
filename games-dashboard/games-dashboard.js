@@ -251,6 +251,8 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       let createAnchor = document.createElement(`a`)
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
+      createAnchor.classList = `btn`;
+      createAnchor.setAttribute('data-id', randomAll);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
