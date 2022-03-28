@@ -4,50 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <link rel="stylesheet" href="games-details.css" />
   <title>GAMSIC</title>
 </head>
 <body>
-<header>
-  <i class="ri-arrow-right-s-line"></i>
-  <i class="ri-sun-fill"></i>
-</header>
-
-<main>
-  <div class="cover"> </div>
-
-  <section class="game-img">
-    <img class="game-img1" src="../assets/images/thumbnail%20(1)%202.png">
-  </section>
-
-  <section class="game-details-description">
-    <section class="game-title">
-      <h1>DUNTLESS</h1>
-    </section>
-    <section class="game_descripe">
-      <div class="game-details">
-        <h6>Description :</h6>
-        <p>A free-to-play, co-op action RPG with gameplay similar to Monster Hunter.</p>
+  <header>
+    <h1><span>GAM</span>SIC</h1>
+    <nav>
+      <a href="games-home.html"><i class="ri-arrow-right-s-line" id="search-btn"></i></a>
+      <i class="ri-sun-fill" id="btn"></i>
+    </nav>
+  </header>
+  <main>
+    <section class="backgroung-img"></section>
+    <section class="container">
+      <div class="column-one">
+        <img id="game-img" src="">
+        <h1></h1>
       </div>
-      <div class="game-details">
-        <h6> Developer :</h6>
-        <p> Phoenix Labs, Iron Galaxy </p>
-      </div>
-      <div class="game-details">
-        <h6> Release date :</h6>
-        <p> 2019-05-21 </p>
-      </div>
-    </section>
-    <section class="game-btn">
-      <button class="btn">Visit Game Site</button>
-    </section>
-    <!--      <section class="main-background">-->
-    <img class="main-background" src="../assets/images/Xbox-wireless-controller-carbon-black%202.png">
-    <!--      </section>-->
-  </section>
+      <div class="description">
+        <article id="desc">
+          <h3>description :</h3>
+          <p></p>
+        </article>
 
-</main>
+        <article id="plat">
+          <h3>platform :</h3>
+          <p></p>
+        </article>
 
-<script src="games-details.js"></script>
+        <article id="deve">
+          <h3>developer :</h3>
+          <p></p>
+        </article>
+
+        <article id="release">
+          <h3>release date :</h3>
+          <p></p>
+        </article>
+
+        <div class="site">
+          <a href="">visit game site</a>
+        </div>
+      </div>
+
+      <img id="console" src="../assets/images/Xbox-wireless-controller-carbon-black 2.png">
+    </section>
+  </main>
+  <script src="games-details.js"></script>
 </body>
 </html>

@@ -2,12 +2,13 @@
 //? accessing the elements
 let toggleBtn = document.querySelector(".ri-sun-fill");
 let main = document.querySelector("main");
+let header = document.querySelector("header");
 let changeTitle = document.querySelector("h1");
-// console.log(main);
 
 //? toggling the class
 function setLightTheme() {
   main.classList.toggle("light");
+  header.classList.toggle("light");
 }
 
 //? add event listener to the btn
@@ -31,4 +32,3 @@ if (lightMode === "on") {
   setLightTheme();
 }
 /*LIGHT AND DARK MODE END*/
-
