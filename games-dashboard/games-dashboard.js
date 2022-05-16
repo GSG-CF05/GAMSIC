@@ -8,6 +8,7 @@ let listAll = document.querySelector('.all');
 let listStratgies = document.querySelector('.strategies');
 let listShooter = document.querySelector('.shooter');
 let listMM = document.querySelector('.mmorpg');
+let main = document.querySelector('main');
 
 let button = document.querySelector('.more-btn')
 let btn;
@@ -35,34 +36,85 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
   /* SEARCH METHOD WITH KEYUP EVENT START */
   searchInput.addEventListener(`keyup`, (e) =>{
     let searchString = e.target.value.toLowerCase();
-    data.filter((games) => {
-      if (games.title.toLowerCase().includes(searchString) === true) {
+    let results = data.filter((games) => {
+      return games.title.toLowerCase().includes(searchString);
+    });
+
+    container.style.display = `none`;
+    if (results.length === 0) {
+      if (main.lastElementChild.classList.contains(`sara`) || main.lastElementChild.classList.contains(`dahman`)) {
+        main.lastElementChild.remove();
+        let empty = document.createElement(`div`);
+        empty.classList = `message sara`;
+        let emptyPara = document.createElement(`p`);
+        emptyPara.textContent = `No matching results !`;
+        empty.appendChild(emptyPara);
+        main.appendChild(empty);
+      }else {
+        
+        let empty = document.createElement(`div`);
+        empty.classList = `error sara`;
+        let emptyPara = document.createElement(`p`);
+        emptyPara.textContent = `No matching results !`;
+        empty.appendChild(emptyPara);
+        main.appendChild(empty);
+      }
+    }else if (main.lastElementChild.classList.contains(`dahman`) || main.lastElementChild.classList.contains(`sara`)) {
+      main.lastElementChild.remove();
+      let newContainer = document.createElement(`div`);
+      newContainer.addEventListener(`click`, btnClicked);
+      newContainer.classList = `container dahman`;
+      main.appendChild(newContainer);
+      for(let i = 0; i < results.length; i++) {
         let createCard = document.createElement('div');
         createCard.setAttribute('class', 'card');
         let createImg = document.createElement('img');
-        createImg.src = games.thumbnail;
-        createImg.alt = games.title;
+        createImg.src = results[i].thumbnail;
+        createImg.alt = results[i].title;
         let createBtn = document.createElement('button');
         createBtn.setAttribute('index', i);
-        createBtn.setAttribute('id', 'more-btn');
+        createBtn.setAttribute('data-id', results[i].id);
         let createAnchor = document.createElement(`a`);
         createAnchor.href = `../games-details/games-details.html`;
         createAnchor.textContent = 'More';
+        createAnchor.classList = `btn`;
+        createAnchor.setAttribute('data-id', results[i].id);
         createBtn.appendChild(createAnchor);
         createCard.appendChild(createImg);
         createCard.appendChild(createBtn);
-        container.replaceChild(createCard, container.childNodes[0]);
-        container.style.height = `100vh`;
-        for (let i = 1; i < 15; i++){
-          container.childNodes[i].style.display = `none`;
-        }
-        if (searchString === '') {
-          for(let i = 1; i < 15; i++){
-            container.childNodes[i].style.display = `flex`;
-          }
-        }
+        newContainer.appendChild(createCard);
       }
-    });
+
+    }else {
+      let newContainer = document.createElement(`div`);
+      newContainer.addEventListener(`click`, btnClicked);
+      newContainer.classList = `container dahman`;
+      main.appendChild(newContainer);
+      for(let i = 0; i < results.length; i++) {
+        let createCard = document.createElement('div');
+        createCard.setAttribute('class', 'card');
+        let createImg = document.createElement('img');
+        createImg.src = results[i].thumbnail;
+        createImg.alt = results[i].title;
+        let createBtn = document.createElement('button');
+        createBtn.setAttribute('data-id', results[i].id);
+        let createAnchor = document.createElement(`a`);
+        createAnchor.href = `../games-details/games-details.html`;
+        createAnchor.textContent = 'More';
+        createAnchor.classList = `btn`;
+        createAnchor.setAttribute('data-id', results[i].id);
+        createBtn.appendChild(createAnchor);
+        createCard.appendChild(createImg);
+        createCard.appendChild(createBtn);
+        newContainer.appendChild(createCard);
+        
+      }
+    }
+
+    if (searchString === '') {
+      main.lastElementChild.remove();
+      container.style.display = `flex`;
+    }
   });
   /* SEARCH METHOD WITH KEYUP EVENT END */
 
@@ -84,17 +136,22 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       createBtn.setAttribute('index', randomAll);
 
       createBtn.classList = `btn`;
-      createBtn.setAttribute('data-id', randomAll);
+      createBtn.setAttribute('data-id', data[randomAll].id);
       let createAnchor = document.createElement(`a`);
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
+      createAnchor.classList = `btn`;
+      createAnchor.setAttribute('data-id', data[randomAll].id);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
       container.replaceChild(createCard, container.childNodes[i]);
 
     }
-
+    listAll.style.color = `#6fce6d`;
+    listStratgies.style.color = `#ffffff`;
+    listMM.style.color = `#ffffff`;
+    listShooter.style.color = `#ffffff`;
   }
 
   /* GET ALLRANDOM FUNCTION END */
@@ -107,11 +164,11 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       if(data[i].genre === 'Strategy'){
   
         strategiesArray.push(data[i]);
-  
+        
       }
   
     }
-  
+
   }
   pushStrategies() //CALLING FUNCTION
   /*PUSH STRATEGIES FUNCTION END*/
@@ -123,26 +180,30 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
 
     for(let i = 0; i < 15; i++){
 
-      let randomStrategies = Math.floor(Math.random() * strategiesArray.length);
       let createCard = document.createElement('div');
       createCard.setAttribute('class', 'card');
       let createImg = document.createElement('img');
-      createImg.src = strategiesArray[randomStrategies].thumbnail;
-      createImg.alt = strategiesArray[randomStrategies].title;
+      createImg.src = strategiesArray[i].thumbnail;
+      createImg.alt = strategiesArray[i].title;
       let createBtn = document.createElement('button');
-      createBtn.setAttribute('index', randomStrategies);
+      createBtn.setAttribute('index', i);
       createBtn.classList = `btn`;
-      createBtn.setAttribute('data-id', randomStrategies);
+      createBtn.setAttribute('data-id', strategiesArray[i].id);
       let createAnchor = document.createElement(`a`);
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
+      createAnchor.classList = `btn`;
+      createAnchor.setAttribute('data-id', strategiesArray[i].id);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
       container.replaceChild(createCard, container.childNodes[i]);
 
     }
-
+    listStratgies.style.color = `#6d8ece`;
+    listMM.style.color = `#ffffff`;
+    listShooter.style.color = `#ffffff`;
+    listAll.style.color = `#ffffff`;
   }
   /* GET STRATEGIES FUNCTION END */
 
@@ -178,17 +239,22 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       let createBtn = document.createElement('button');
       createBtn.setAttribute('index', randomShooter);
       createBtn.classList = `btn`;
-      createBtn.setAttribute('data-id', randomShooter);
+      createBtn.setAttribute('data-id', shooterArray[randomShooter].id);
       let createAnchor = document.createElement(`a`)
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
+      createAnchor.classList = `btn`;
+      createAnchor.setAttribute('data-id', shooterArray[randomShooter].id);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
       container.replaceChild(createCard, container.childNodes[i]);
 
     }
-
+    listShooter.style.color = `#ce6d6d`;
+    listMM.style.color = `#ffffff`;
+    listStratgies.style.color = `#ffffff`;
+    listAll.style.color = `#ffffff`;
   }
 
   /* PUSH MMORPG FUNCTION START */
@@ -201,6 +267,7 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       }
 
     }
+    
   }
   pushmm(); //CALLING FUNCTION
   /*PUSH MMORPG FUNCTION END*/
@@ -221,17 +288,22 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       let createBtn = document.createElement('button');
       createBtn.setAttribute('index', randomMm);
       createBtn.classList = `btn`;
-      createBtn.setAttribute('data-id', randomMm);
+      createBtn.setAttribute('data-id', mmArray[randomMm].id);
       let createAnchor = document.createElement(`a`);
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
+      createAnchor.classList = `btn`;
+      createAnchor.setAttribute('data-id', mmArray[randomMm].id);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
       container.replaceChild(createCard, container.childNodes[i]);
     
     }
-  
+    listMM.style.color = `#cc6dce`;
+    listShooter.style.color = `#ffffff`;
+    listStratgies.style.color = `#ffffff`;
+    listAll.style.color = `#ffffff`;
   }
 
   /* GET MMORPG FUNCTION END */
@@ -246,13 +318,13 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
       createImg.src = data[randomAll].thumbnail;
       createImg.alt = data[randomAll].title;
       let createBtn = document.createElement('button');
-      createBtn.setAttribute('data-id', randomAll);
+      createBtn.setAttribute('data-id', data[randomAll].id);
       createBtn.classList = `btn`;
       let createAnchor = document.createElement(`a`)
       createAnchor.href = `../games-details/games-details.html`;
       createAnchor.textContent = 'More';
       createAnchor.classList = `btn`;
-      createAnchor.setAttribute('data-id', randomAll);
+      createAnchor.setAttribute('data-id', data[randomAll].id);
       createBtn.appendChild(createAnchor);
       createCard.appendChild(createImg);
       createCard.appendChild(createBtn);
@@ -260,7 +332,7 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc'
 
     }
     /* GET RANDOM CARD FROM API END */
-
+    listAll.style.color = `#6fce6d`;
 }).catch(Error);
 /*FETCH API LINK START*/
 
@@ -278,7 +350,6 @@ function btnClicked (e) {
 /*LIGHT AND DARK MODE START*/
 //? accessing the elements
 let toggleBtn = document.querySelector(".ri-sun-fill");
-let main = document.querySelector("main");
 let changeTitle = document.querySelector("h1");
 // console.log(main);
 
@@ -312,11 +383,12 @@ if (lightMode === "on") {
 /*Digital clock*/
 
 function showTime() {
-  var time = new Date();
-  var hours = time.getHours();
-  var minutes = time.getMinutes();
-  var seconds = time.getSeconds();
-  var period = "AM";
+  let clock = document.querySelector(".clock");
+  let time = new Date();
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  let seconds = time.getSeconds();
+  let period = "AM";
   
   
   if (hours == 0){
@@ -331,11 +403,27 @@ function showTime() {
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
   
-  var time = hours + ":" + minutes + ":" + seconds + "" + period;
+  // var time = hours + ":" + minutes + ":" + seconds + "" + period;
+  time = `${hours}:${minutes}:${seconds} ${period}`
   
-  document.querySelector(".clock").textContent = time;
-  
-  setInterval(showTime, 1000);
-  }
-  
-  showTime();
+  clock.textContent = time;
+}
+setInterval(showTime);
+
+function time() {
+  let clock = document.querySelector(".clock");
+  let rand = Math.floor(Math.random() * 240);
+    clock.style.background = `hsl(${rand}, 100%, 50%)`;
+}
+
+setInterval(time, 1000);
+
+
+// for (let i = 1; i < 15; i++){
+//   container.childNodes[i].style.display = `none`;
+// }
+// if (searchString === '') {
+//   for(let i = 1; i < 15; i++){
+//     container.childNodes[i].style.display = `flex`;
+//   }
+// }

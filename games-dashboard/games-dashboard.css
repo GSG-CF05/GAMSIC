@@ -9,8 +9,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--background-color);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+html {
+  background: var(--background-color);
+}
 /* THE ROOT & LIGHT VARIABLE START */
 
 :root {
@@ -55,11 +61,10 @@ body {
 
 main {
   width: 100%;
-  background: var(--background-color);
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--background-color);
 }
 
 /*HEADER STYLE START*/
@@ -130,11 +135,6 @@ header nav a {
   nav {
     padding: 0;
   }
-
-  header nav .clock{
-    display: block;
-    margin-left: 3rem;
-  }
 }
 
 /* HEADER STYLE IN MEDIAM SCREEN END*/
@@ -163,11 +163,6 @@ header nav a {
 
   nav {
     padding: 0;
-  }
-
-  header nav .clock{
-    display: block;
-    margin-left: 4rem;
   }
 }
 
@@ -223,7 +218,7 @@ form i {
   font-weight: 100;
   color: rgba(168, 168, 168, 1);
   padding-left: 1rem;
-  padding-top: 0.25rem;
+  padding-top: 0.45rem;
 }
 
 form input {
@@ -240,7 +235,6 @@ form input {
 
 form input::-webkit-input-placeholder {
   color: var(--secondary-color);
-  text-shadow: 0 0 5px var(--secondary-color);
   font-family: "Alef", sans-serif;
 }
 
@@ -646,13 +640,21 @@ form input::-webkit-input-placeholder {
   box-shadow: 0 5px 15px 0 black;
   width: 100%;
   height: 160px;
+  overflow: hidden;
+
 }
+
+.container .card:hover > img {
+  transform: scale(1.1) rotate(3deg);
+  opacity: 0.4;
+}
+
 .container .card img {
   position: relative;
-  border-radius: 30px;
   width: 100%;
   height: 100%;
   opacity: 0.8;
+  transition: all 0.3s ease-in-out;
 }
 
 .container .card button {
@@ -663,11 +665,16 @@ form input::-webkit-input-placeholder {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   cursor: pointer;
   border: 0;
   outline: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.container button:hover {
+  background-color: #458eab;
 }
 
 .container .card button a {
@@ -724,3 +731,42 @@ form input::-webkit-input-placeholder {
 /* CONTAINER SECTION STYLE IN MAX LARGE SCREEN END */
 
 /* CARD CONTAINER SECTION STYLE END */
+
+.clock {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #458eab;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 #501616;
+  position: fixed;
+  left: 0.5rem;
+  bottom: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 10000;
+}
+
+@media (max-width: 767.99px) {
+  .clock{
+    display: none;
+  }
+}
+
+.message {
+  background-color: #32568b;
+  padding: 0.8rem 4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgb(160, 160, 160);
+  margin-top: 7rem;
+}
